@@ -35,5 +35,5 @@ func main() {
 
 	//声明局部变量 c 并计算 a 和 b 的和
 	c := a + b
-	fmt.Print("a=%b,b=d%,c=%d\n", a, b, c)
+	fmt.Print("a=%d,b=%d,c=%d\n", a, b, c)
 }
