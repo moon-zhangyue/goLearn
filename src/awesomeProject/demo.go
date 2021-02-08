@@ -1,5 +1,4 @@
 package main // 声明 main 包
-import "fmt"
 
 //func main() { // 声明 main 主函数
 //fmt.Println("Hello World!") // 打印 Hello World!
@@ -192,7 +191,7 @@ func main() {
 }*/
 
 // 交换函数
-func swap(a, b *int) {
+/*func swap(a, b *int) {
 
 	// 取a指针的值, 赋给临时变量t
 	t := *a
@@ -214,4 +213,34 @@ func main() {
 
 	// 输出变量值
 	fmt.Println(x, y)
+}*/
+
+//在swap() 函数中交换操作的是指针值
+/*func swap(a, b *int) {
+	b, a = a, b
+	fmt.Println(a, b)
 }
+
+func main() {
+	x, y := 1, 2
+	swap(&x, &y)
+	fmt.Println(x, y)
+}*/
+
+// 定义命令行参数
+/*var mode = flag.String("mode", "", "process mode")
+
+func main() {
+	// 解析命令行参数
+	flag.Parse()
+	// 输出命令行参数
+	fmt.Println(*mode)
+}*/
+//go run main.go --mode=HAHA
+
+//new() 函数可以创建一个对应类型的指针，创建过程会分配内存，被创建的指针指向默认值。
+/*func main() {
+	str := new(string)
+	*str = "Go语言教程"
+	fmt.Println(*str)
+}*/
