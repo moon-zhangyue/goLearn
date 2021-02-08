@@ -1,4 +1,5 @@
 package main // 声明 main 包
+import "fmt"
 
 //func main() { // 声明 main 主函数
 //fmt.Println("Hello World!") // 打印 Hello World!
@@ -244,3 +245,60 @@ func main() {
 	*str = "Go语言教程"
 	fmt.Println(*str)
 }*/
+
+/*func calc(a, b int) int {
+	var c int
+	c = a * b
+
+	var x int
+	x = c * 10
+
+	return x
+}
+func main() {
+	res := calc(1, 2)
+	fmt.Print(res)
+}*/
+
+//变量逃逸
+// 本函数测试入口参数和返回值情况
+/*func dummy(b int) int {
+
+	// 声明一个变量c并赋值
+	var c int
+	c = b
+
+	return c
+}
+
+// 空函数, 什么也不做
+func void() {
+}
+
+func main() {
+
+	// 声明a变量并打印
+	var a int
+
+	// 调用void()函数
+	void()
+
+	// 打印a变量的值和dummy()函数返回
+	fmt.Println(a, dummy(0))
+}*/
+
+// 声明空结构体测试结构体逃逸情况
+type Data struct {
+}
+
+func dummy() *Data {
+	// 实例化c为Data类型
+	var c Data
+
+	//返回函数局部变量地址
+	return &c
+}
+
+func main() {
+	fmt.Println(dummy())
+}
