@@ -1,4 +1,8 @@
 package main // 声明 main 包
+import (
+	"fmt"
+	"time"
+)
 
 //func main() { // 声明 main 主函数
 //fmt.Println("Hello World!") // 打印 Hello World!
@@ -301,3 +305,12 @@ func dummy() *Data {
 func main() {
 	fmt.Println(dummy())
 }*/
+
+//const关键字
+func main() {
+	const noDelay time.Duration = 0
+	const timeout = 5 * time.Minute
+	fmt.Printf("%T %[1]v\n", noDelay)     // "time.Duration 0"
+	fmt.Printf("%T %[1]v\n", timeout)     // "time.Duration 5m0s"
+	fmt.Printf("%T %[1]v\n", time.Minute) // "time.Duration 1m0s"
+}
