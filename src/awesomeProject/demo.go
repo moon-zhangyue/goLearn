@@ -312,6 +312,7 @@ func main() {
 	//fmt.Printf("%T %[1]v\n", timeout)     // "time.Duration 5m0s"
 	//fmt.Printf("%T %[1]v\n", time.Minute) // "time.Duration 1m0s"
 
+	//iota 常量生成器
 	const (
 		a = 1
 		b
