@@ -308,6 +308,7 @@ func main() {
 
 //const关键字
 func main() {
+	//%后的副词[1]告知Printf重复使用第一个操作数。
 	const noDelay time.Duration = 0
 	const timeout = 5 * time.Minute
 	fmt.Printf("%T %[1]v\n", noDelay)     // "time.Duration 0"
