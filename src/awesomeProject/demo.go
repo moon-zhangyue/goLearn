@@ -304,7 +304,7 @@ func main() {
 }*/
 
 //const关键字
-func main() {
+/*func main() {
 	//%后的副词[1]告知Printf重复使用第一个操作数。
 	//const noDelay time.Duration = 0
 	//const timeout = 5 * time.Minute
@@ -320,4 +320,62 @@ func main() {
 		d
 	)
 	fmt.Println(a, b, c, d) // "1 1 2 2"
+}*/
+
+//GO语言模拟枚举
+/*func main() {
+	//type Weapon int
+	//
+	//const (
+	//	Arrow Weapon = iota // 开始生成枚举值, 默认为0
+	//	Shuriken
+	//	SniperRifle
+	//	Rifle
+	//	Blower
+	//)
+	//
+	//// 输出所有枚举值
+	//fmt.Println(Arrow, Shuriken, SniperRifle, Rifle, Blower)
+	//
+	//// 使用枚举类型并赋初值
+	//var weapon Weapon = Blower
+	//fmt.Println(weapon)
+
+	//2进制 左移一位
+	const (
+		FlagNone = 1 << iota
+		FlagRed
+		FlagGreen
+		FlagBlue
+	)
+
+	fmt.Printf("%d %d %d\n", FlagRed, FlagGreen, FlagBlue)
+	fmt.Printf("%b %b %b\n", FlagRed, FlagGreen, FlagBlue)
+}*/
+
+// 声明芯片类型
+type ChipType int
+
+const (
+	None ChipType = iota
+	CPU           // 中央处理器
+	GPU           // 图形处理器
+)
+
+func (c ChipType) String() string {
+	switch c {
+	case None:
+		return "None"
+	case CPU:
+		return "CPU"
+	case GPU:
+		return "GPU"
+	}
+
+	return "N/A"
+}
+
+func main() {
+	// 输出CPU的值并以整型格式显示
+	fmt.Printf("%s %d", CPU, CPU)
 }
