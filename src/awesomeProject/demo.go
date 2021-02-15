@@ -1,5 +1,4 @@
 package main // 声明 main 包
-import "math"
 
 //func main() { // 声明 main 主函数
 //fmt.Println("Hello World!") // 打印 Hello World!
@@ -302,15 +301,3 @@ func dummy() *Data {
 func main() {
 	fmt.Println(dummy())
 }*/
-
-//生命周期
-func main() {
-	for t := 0.0; t < cycles*2*math.Pi; t += res {
-		x := math.Sin(t)
-		y := math.Sin(t*freq + phase)
-		img.SetColorIndex(
-			size+int(x*size+0.5), size+int(y*size+0.5),
-			blackIndex, // 最后插入的逗号不会导致编译错误，这是Go编译器的一个特性
-		) // 小括号另起一行缩进，和大括号的风格保存一致
-	}
-}
