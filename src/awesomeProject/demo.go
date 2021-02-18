@@ -1,8 +1,5 @@
+//demo测试
 package main // 声明 main 包
-import (
-	"fmt"
-	"reflect"
-)
 
 //func main() { // 声明 main 主函数
 //fmt.Println("Hello World!") // 打印 Hello World!
@@ -424,7 +421,7 @@ func main() {
 在结构体成员嵌入时使用别名
 */
 // 定义商标结构
-type Brand struct {
+/*type Brand struct {
 }
 
 // 为商标结构添加Show()方法
@@ -460,4 +457,6 @@ func main() {
 		fmt.Printf("FieldName: %v, FieldType: %v\n", f.Name, f.Type.
 			Name())
 	}
-}
+}*/
+
+//Go语言 词法元素5种：标识符（identifier）、关键字（keyword）、操作符（operator）、分隔符（delimiter）、字面量（literal）
