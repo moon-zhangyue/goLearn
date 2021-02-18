@@ -1,5 +1,9 @@
 //demo测试
 package main // 声明 main 包
+import (
+	"fmt"
+	"strconv"
+)
 
 //func main() { // 声明 main 主函数
 //fmt.Println("Hello World!") // 打印 Hello World!
@@ -460,3 +464,10 @@ func main() {
 }*/
 
 //Go语言 词法元素5种：标识符（identifier）、关键字（keyword）、操作符（operator）、分隔符（delimiter）、字面量（literal）
+
+//字符串和数字类型转换
+func main() {
+	num := 100
+	str := strconv.Itoa(num)
+	fmt.Printf("type:%T value:%#v\n", str, str)
+}
