@@ -466,8 +466,27 @@ func main() {
 //Go语言 词法元素5种：标识符（identifier）、关键字（keyword）、操作符（operator）、分隔符（delimiter）、字面量（literal）
 
 //字符串和数字类型转换
-func main() {
+//整型转字符串
+/*func main() {
 	num := 100
 	str := strconv.Itoa(num)
 	fmt.Printf("type:%T value:%#v\n", str, str)
+}*/
+
+//字符串转整型
+func main() {
+	str1 := "110"
+	str2 := "s100"
+	num1, err := strconv.Atoi(str1)
+	if err != nil {
+		fmt.Printf("%v 转换失败！", str1)
+	} else {
+		fmt.Printf("type:%T value:%#v\n", num1, num1)
+	}
+	num2, err := strconv.Atoi(str2)
+	if err != nil {
+		fmt.Printf("%v 转换失败！", str2)
+	} else {
+		fmt.Printf("type:%T value:%#v\n", num2, num2)
+	}
 }
