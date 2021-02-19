@@ -474,7 +474,7 @@ func main() {
 }*/
 
 //字符串转整型
-func main() {
+/*func main() {
 	str1 := "110"
 	str2 := "s100"
 	num1, err := strconv.Atoi(str1)
@@ -488,5 +488,34 @@ func main() {
 		fmt.Printf("%v 转换失败！", str2)
 	} else {
 		fmt.Printf("type:%T value:%#v\n", num2, num2)
+	}
+}*/
+
+//将字符串转换为bool，接受 1、0、t、f、T、F、true、false、True、False、TRUE、FALSE，其它的值均返回错误
+/*func main() {
+	str1 := "110"
+	boo1, err := strconv.ParseBool(str1)
+	if err != nil {
+		fmt.Printf("str1: %v\n", err)
+	} else {
+		fmt.Println(boo1)
+	}
+	str2 := "t"
+	boo2, err := strconv.ParseBool(str2)
+	if err != nil {
+		fmt.Printf("str2: %v\n", err)
+	} else {
+		fmt.Println(boo2)
+	}
+}*/
+
+//ParseInt() 函数用于返回字符串表示的整数值（可以包含正负号）
+func main() {
+	str := "-11"
+	num, err := strconv.ParseInt(str, 10, 0)
+	if err != nil {
+		fmt.Println(err)
+	} else {
+		fmt.Println(num)
 	}
 }
