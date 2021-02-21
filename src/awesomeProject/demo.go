@@ -510,9 +510,20 @@ func main() {
 }*/
 
 //ParseInt() 函数用于返回字符串表示的整数值（可以包含正负号）
-func main() {
+/*func main() {
 	str := "-11"
 	num, err := strconv.ParseInt(str, 10, 0)
+	if err != nil {
+		fmt.Println(err)
+	} else {
+		fmt.Println(num)
+	}
+}*/
+
+//ParseUint() 函数的功能类似于 ParseInt() 函数，但 ParseUint() 函数不接受正负号，用于无符号整型
+func main() {
+	str := "11"
+	num, err := strconv.ParseUint(str, 10, 0)
 	if err != nil {
 		fmt.Println(err)
 	} else {
