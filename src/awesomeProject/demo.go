@@ -1,9 +1,6 @@
 //demo测试
 package main // 声明 main 包
-import (
-	"fmt"
-	"strconv"
-)
+import "fmt"
 
 //func main() { // 声明 main 主函数
 //fmt.Println("Hello World!") // 打印 Hello World!
@@ -541,7 +538,7 @@ func main() {
 	}
 }*/
 
-func main() {
+/*func main() {
 	// 声明一个slice
 	b10 := []byte("int (base 10):")
 
@@ -552,4 +549,25 @@ func main() {
 	b16 := []byte("int (base 16):")
 	b16 = strconv.AppendInt(b16, -42, 16)
 	fmt.Println(string(b16))
+}*/
+
+/*
+定义数组
+var 数组变量名 [元素数量]Type
+*/
+func main() {
+	var a [3]int // 定义三个整数的数组
+
+	fmt.Println(a[0])        // 打印第一个元素
+	fmt.Println(a[len(a)-1]) // 打印最后一个元素
+
+	// 打印索引和元素
+	for i, v := range a {
+		fmt.Printf("%d %d\n", i, v)
+	}
+
+	// 仅打印元素
+	for _, v := range a {
+		fmt.Printf("%d\n", v)
+	}
 }
