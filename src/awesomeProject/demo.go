@@ -1,6 +1,5 @@
 //demo测试
 package main // 声明 main 包
-import "fmt"
 
 //func main() { // 声明 main 主函数
 //fmt.Println("Hello World!") // 打印 Hello World!
@@ -604,7 +603,7 @@ var 数组变量名 [元素数量]Type
 }*/
 
 //多维数组
-func main() {
+/*func main() {
 	// 声明一个二维整型数组，两个维度的长度分别是 4 和 2
 	var array [4][2]int
 	// 使用数组字面量来声明并初始化一个二维整型数组
@@ -616,4 +615,14 @@ func main() {
 	// 声明并初始化数组中指定的元素
 	array = [4][2]int{1: {0: 20}, 3: {1: 41}}
 	fmt.Printf("%v", array)
+}*/
+
+func main() {
+	// 声明一个 2×2 的二维整型数组
+	var array [2][2]int
+	// 设置每个元素的整型值
+	array[0][0] = 10
+	array[0][1] = 20
+	array[1][0] = 30
+	array[1][1] = 40
 }
