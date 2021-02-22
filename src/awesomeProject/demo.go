@@ -1,5 +1,6 @@
 //demo测试
 package main // 声明 main 包
+import "fmt"
 
 //func main() { // 声明 main 主函数
 //fmt.Println("Hello World!") // 打印 Hello World!
@@ -617,7 +618,7 @@ var 数组变量名 [元素数量]Type
 	fmt.Printf("%v", array)
 }*/
 
-func main() {
+/*func main() {
 	// 声明一个 2×2 的二维整型数组
 	var array [2][2]int
 	// 设置每个元素的整型值
@@ -625,4 +626,26 @@ func main() {
 	array[0][1] = 20
 	array[1][0] = 30
 	array[1][1] = 40
+}*/
+
+//切片
+func main() {
+	//var a = [3]int{1, 2, 3}
+
+	//fmt.Println(a, a[1:2])
+
+	var highRiseBuilding [30]int
+
+	for i := 0; i < 30; i++ {
+		highRiseBuilding[i] = i + 1
+	}
+
+	// 区间
+	fmt.Println(highRiseBuilding[10:15])
+
+	// 中间到尾部的所有元素
+	fmt.Println(highRiseBuilding[20:])
+
+	// 开头到中间指定位置的所有元素
+	fmt.Println(highRiseBuilding[:2])
 }
