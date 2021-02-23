@@ -629,7 +629,7 @@ var 数组变量名 [元素数量]Type
 }*/
 
 //切片
-func main() {
+/*func main() {
 	//var a = [3]int{1, 2, 3}
 
 	//fmt.Println(a, a[1:2])
@@ -675,4 +675,23 @@ func main() {
 
 	fmt.Println(a, b)
 	fmt.Println(len(a), len(b))
+}*/
+
+//append
+func main() {
+	var a []int
+	a = append(a, 1) // 追加1个元素
+	fmt.Println(a)
+	a = append(a, 1, 2, 3) // 追加多个元素, 手写解包方式
+	fmt.Println(a)
+	a = append(a, []int{1, 2, 3}...) // 追加一个切片, 切片需要解包
+	fmt.Println(a)
+
+	//切片在扩容时，容量的扩展规律是按容量的 2 倍数进行扩充，例如 1、2、4、8、16……
+	var numbers []int
+
+	for i := 0; i < 10; i++ {
+		numbers = append(numbers, i)
+		fmt.Printf("len: %d  cap: %d pointer: %p\n", len(numbers), cap(numbers), numbers)
+	}
 }
