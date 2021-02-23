@@ -714,7 +714,7 @@ var 数组变量名 [元素数量]Type
 }*/
 
 //切片操作
-func main() {
+/*func main() {
 	// 设置元素数量为1000
 	//const elementCount = 1000
 	//
@@ -787,4 +787,22 @@ func main() {
 	seq = append(seq[:index], seq[index+1:]...)
 
 	fmt.Println(seq)
+}*/
+
+//range，它可以配合关键字 for 来迭代切片里的每一个元素
+func main() {
+	// 创建一个整型切片，并赋值
+	slice := []int{10, 20, 30, 40}
+	// 迭代每一个元素，并显示其值
+	for index, value := range slice {
+		fmt.Printf("Index: %d Value: %d\n", index, value)
+	}
+
+	//range 返回的是每个元素的副本，而不是直接返回对该元素的引用
+	// 创建一个整型切片，并赋值
+	slices := []int{10, 20, 30, 40}
+	// 迭代每个元素，并显示值和地址
+	for index, value := range slices {
+		fmt.Printf("Value: %d Value-Addr: %X ElemAddr: %X\n", value, &value, &slice[index])
+	}
 }
