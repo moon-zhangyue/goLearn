@@ -790,7 +790,7 @@ var 数组变量名 [元素数量]Type
 }*/
 
 //range，它可以配合关键字 for 来迭代切片里的每一个元素  从头部开始迭代
-func main() {
+/*func main() {
 	// 创建一个整型切片，并赋值
 	slice := []int{10, 20, 30, 40}
 	// 迭代每一个元素，并显示其值
@@ -806,4 +806,17 @@ func main() {
 		fmt.Printf("Value: %d Value-Addr: %X ElemAddr: %X\n", value, &value, &slice[index])
 	}
 	//迭代返回的变量是一个在迭代过程中根据切片依次赋值的新变量，所以 value 的地址总是相同的，要想获取每个元素的地址，需要使用切片变量和索引值（例如上面代码中的 &slice[index]）
+}*/
+
+//多维切片--切片有几个维度就需要几个[ ]
+func main() {
+	//声明一个二维切片
+	var slice [][]int
+	//为二维切片赋值
+	slice = [][]int{{10}, {100, 200}}
+	fmt.Println(slice)
+
+	// 声明一个二维整型切片并赋值
+	slices := [][]int{{10}, {100, 200}}
+	fmt.Println(slices)
 }
