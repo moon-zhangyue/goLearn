@@ -678,7 +678,7 @@ var 数组变量名 [元素数量]Type
 }*/
 
 //append
-func main() {
+/*func main() {
 	//var a []int
 	//a = append(a, 1) // 追加1个元素
 	//fmt.Println(a)
@@ -701,4 +701,90 @@ func main() {
 	fmt.Println(a)
 	a = append([]int{-3, -2, -1}, a...) // 在开头添加1个切片
 	fmt.Println(a)
+}*/
+
+//copy复制
+/*func main() {
+	slice1 := []int{1, 2, 3, 4, 5}
+	slice2 := []int{5, 4, 3}
+	copy(slice2, slice1) // 只会复制slice1的前3个元素到slice2中
+	fmt.Println(slice2)
+	copy(slice1, slice2) // 只会复制slice2的3个元素到slice1的前3个位置
+	fmt.Println(slice1)
+}*/
+
+//切片操作
+func main() {
+	// 设置元素数量为1000
+	//const elementCount = 1000
+	//
+	//// 预分配足够多的元素切片
+	//srcData := make([]int, elementCount)
+	//
+	//// 将切片赋值
+	//for i := 0; i < elementCount; i++ {
+	//	srcData[i] = i
+	//}
+	//
+	//// 引用切片数据
+	//refData := srcData
+	//
+	//// 预分配足够多的元素切片
+	//copyData := make([]int, elementCount)
+	//// 将数据复制到新的切片空间中
+	//copy(copyData, srcData)
+	//
+	//// 修改原始数据的第一个元素
+	//srcData[0] = 999
+	//
+	//// 打印引用切片的第一个元素
+	//fmt.Println(refData[0])
+	//
+	//// 打印复制切片的第一个和最后一个元素
+	//fmt.Println(copyData[0], copyData[elementCount-1])
+	//
+	//// 复制原始数据从4到6(不包含)
+	//copy(copyData, srcData[4:6])
+	//
+	//for i := 0; i < 5; i++ {
+	//	fmt.Printf("%d ", copyData[i])
+	//}
+
+	//删除开头元素直接移动指针数据
+	//var a = []int{1, 2, 3, 4, 5}
+	//a = a[1:] //删除开头1个元素
+	//fmt.Println(a)
+	//a = a[3:] //删除开头3个元素
+	//fmt.Println(a)
+
+	//可以不移动数据指针，但是将后面的数据向开头移动，可以用 append 原地完成（所谓原地完成是指在原有的切片数据对应的内存区间内完成，不会导致内存空间结构的变化）：
+	//var a = []int{1, 2, 3, 4, 5, 6}
+	//a = append(a[:0], a[1:]...) // 删除开头1个元素
+	//fmt.Println(a)
+	//a = append(a[:0], a[3:]...) // 删除开头N个元素
+	//fmt.Println(a)
+
+	//用 copy() 函数来删除开头的元素：
+	//var a = []int{1, 2, 3, 4, 5}
+	//var b = []int{0, 0, 0, 0}
+	//copy(b, a[1:])
+	//fmt.Println(b)
+	//fmt.Println(a[1:])
+	//a = a[:copy(a, a[1:])] // 删除开头1个元素
+	//fmt.Println(a)
+	//a = a[:copy(a, a[3:])] // 删除开头N个元素
+	//fmt.Println(a)
+
+	seq := []string{"a", "b", "c", "d", "e"}
+
+	// 指定删除位置
+	index := 2
+
+	// 查看删除位置之前的元素和之后的元素
+	fmt.Println(seq[:index], seq[index+1:])
+
+	// 将删除点前后的元素连接起来
+	seq = append(seq[:index], seq[index+1:]...)
+
+	fmt.Println(seq)
 }
