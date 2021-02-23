@@ -789,7 +789,7 @@ var 数组变量名 [元素数量]Type
 	fmt.Println(seq)
 }*/
 
-//range，它可以配合关键字 for 来迭代切片里的每一个元素
+//range，它可以配合关键字 for 来迭代切片里的每一个元素  从头部开始迭代
 func main() {
 	// 创建一个整型切片，并赋值
 	slice := []int{10, 20, 30, 40}
@@ -805,4 +805,5 @@ func main() {
 	for index, value := range slices {
 		fmt.Printf("Value: %d Value-Addr: %X ElemAddr: %X\n", value, &value, &slice[index])
 	}
+	//迭代返回的变量是一个在迭代过程中根据切片依次赋值的新变量，所以 value 的地址总是相同的，要想获取每个元素的地址，需要使用切片变量和索引值（例如上面代码中的 &slice[index]）
 }
