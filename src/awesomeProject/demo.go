@@ -679,19 +679,26 @@ var 数组变量名 [元素数量]Type
 
 //append
 func main() {
-	var a []int
-	a = append(a, 1) // 追加1个元素
-	fmt.Println(a)
-	a = append(a, 1, 2, 3) // 追加多个元素, 手写解包方式
-	fmt.Println(a)
-	a = append(a, []int{1, 2, 3}...) // 追加一个切片, 切片需要解包
-	fmt.Println(a)
+	//var a []int
+	//a = append(a, 1) // 追加1个元素
+	//fmt.Println(a)
+	//a = append(a, 1, 2, 3) // 追加多个元素, 手写解包方式
+	//fmt.Println(a)
+	//a = append(a, []int{1, 2, 3}...) // 追加一个切片, 切片需要解包
+	//fmt.Println(a)
 
 	//切片在扩容时，容量的扩展规律是按容量的 2 倍数进行扩充，例如 1、2、4、8、16……
-	var numbers []int
+	//var numbers []int
 
-	for i := 0; i < 10; i++ {
-		numbers = append(numbers, i)
-		fmt.Printf("len: %d  cap: %d pointer: %p\n", len(numbers), cap(numbers), numbers)
-	}
+	//for i := 0; i < 10; i++ {
+	//	numbers = append(numbers, i)
+	//	fmt.Printf("len: %d  cap: %d pointer: %p\n", len(numbers), cap(numbers), numbers)
+	//}
+
+	//在切片开头添加元素-性能较差（内容会重新分配，已有元素全部被复制1次）
+	var a = []int{1, 2, 3}
+	a = append([]int{0}, a...) // 在开头添加1个元素
+	fmt.Println(a)
+	a = append([]int{-3, -2, -1}, a...) // 在开头添加1个切片
+	fmt.Println(a)
 }
