@@ -650,22 +650,29 @@ func main() {
 	//fmt.Println(highRiseBuilding[:2])
 
 	// 声明字符串切片
-	var strList []string
+	//var strList []string
 
 	// 声明整型切片
-	var numList []int
+	//var numList []int
 
 	// 声明一个空切片
-	var numListEmpty = []int{}
+	//var numListEmpty = []int{}
 
 	// 输出3个切片
-	fmt.Println(strList, numList, numListEmpty)
+	//fmt.Println(strList, numList, numListEmpty)
 
 	// 输出3个切片大小
-	fmt.Println(len(strList), len(numList), len(numListEmpty))
+	//fmt.Println(len(strList), len(numList), len(numListEmpty))
 
 	// 切片判定空的结果
-	fmt.Println(strList == nil)
-	fmt.Println(numList == nil)
-	fmt.Println(numListEmpty == nil)
+	//fmt.Println(strList == nil)
+	//fmt.Println(numList == nil)
+	//fmt.Println(numListEmpty == nil)
+
+	//使用 make() 函数生成的切片一定发生了内存分配操作，但给定开始与结束位置（包括切片复位）的切片只是将新的切片结构指向已经分配好的内存区域，设定开始与结束位置，不会发生内存分配操作。
+	a := make([]int, 2)
+	b := make([]int, 2, 10)
+
+	fmt.Println(a, b)
+	fmt.Println(len(a), len(b))
 }
