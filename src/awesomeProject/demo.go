@@ -851,11 +851,14 @@ var 数组变量名 [元素数量]Type
 
 //用切片作为 map 的值 -既然一个 key 只能对应一个 value，而 value 又是一个原始类型，那么如果一个 key 要对应多个值怎么办？通过将 value 定义为 []int 类型或者其他类型的切片，就可以优雅的解决这个问题
 func main() {
-	//var a = [3]int{1, 2, 3}
-
 	mp1 := make(map[int][]int)
 	mp2 := make(map[int]*[]int)
 
+	a := []int{1, 2, 3}
+
+	mp1[0] = a
+
+	fmt.Println(a)
 	fmt.Println(mp1)
 	fmt.Println(mp2)
 }
