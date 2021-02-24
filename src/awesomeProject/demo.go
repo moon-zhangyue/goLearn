@@ -809,7 +809,7 @@ var 数组变量名 [元素数量]Type
 }*/
 
 //多维切片--切片有几个维度就需要几个[ ]
-func main() {
+/*func main() {
 	//声明一个二维切片
 	var slice [][]int
 	//为二维切片赋值
@@ -827,4 +827,35 @@ func main() {
 	//为第一个切片追加20的元素
 	newSlice[0] = append(newSlice[0], 20)
 	fmt.Println(newSlice)
+}*/
+
+//map-引用类型（一种元素对（pair）的无序集合，pair 对应一个 key（索引）和一个 value（值），所以这个结构也称为关联数组或字典，这是一种能够快速寻找值的理想结构，给定 key，就可以迅速找到对应的 value。map 这种数据结构在其他编程语言中也称为字典（Python）、hash 和 HashTable 等。）
+/*func main() {
+	var mapList map[string]int
+	//var mapCreated map[string]float32
+	var mapAssigned map[string]int
+
+	mapList = map[string]int{"one": 1, "two": 2}
+	mapCreated := make(map[string]float32) //可以使用 make()，但不能使用 new() 来构造 map，如果错误的使用 new() 分配了一个引用对象，会获得一个空引用的指针，相当于声明了一个未初始化的变量并且取了它的地址
+	mapAssigned = mapList
+
+	mapCreated["key1"] = 4.5
+	mapCreated["key2"] = 3.14159
+	mapAssigned["two"] = 3
+
+	fmt.Printf("Map literal at \"one\" is: %d\n", mapList["one"])
+	fmt.Printf("Map created at \"key2\" is: %f\n", mapCreated["key2"])
+	fmt.Printf("Map assigned at \"two\" is: %d\n", mapList["two"])
+	fmt.Printf("Map literal at \"ten\" is: %d\n", mapList["ten"])
+}*/
+
+//用切片作为 map 的值 -既然一个 key 只能对应一个 value，而 value 又是一个原始类型，那么如果一个 key 要对应多个值怎么办？通过将 value 定义为 []int 类型或者其他类型的切片，就可以优雅的解决这个问题
+func main() {
+	//var a = [3]int{1, 2, 3}
+
+	mp1 := make(map[int][]int)
+	mp2 := make(map[int]*[]int)
+
+	fmt.Println(mp1)
+	fmt.Println(mp2)
 }
