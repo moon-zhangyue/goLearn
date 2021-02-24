@@ -855,8 +855,10 @@ func main() {
 	mp2 := make(map[int]*[]int)
 
 	a := []int{1, 2, 3}
+	b := []int{1, 2, 4}
 
 	mp1[0] = a
+	mp1[1] = b
 
 	fmt.Println(a)
 	fmt.Println(mp1)
