@@ -819,4 +819,12 @@ func main() {
 	// 声明一个二维整型切片并赋值
 	slices := [][]int{{10}, {100, 200}}
 	fmt.Println(slices)
+
+	//声明一个二维性切片并赋值
+	newSlice := [][]int{{10}, {20, 30}}
+	fmt.Println(newSlice)
+
+	//为第一个切片追加20的元素
+	newSlice[0] = append(newSlice[0], 20)
+	fmt.Println(newSlice)
 }
