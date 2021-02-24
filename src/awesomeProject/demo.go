@@ -1,6 +1,5 @@
 //demo测试
 package main // 声明 main 包
-import "fmt"
 
 //func main() { // 声明 main 主函数
 //fmt.Println("Hello World!") // 打印 Hello World!
@@ -850,7 +849,7 @@ var 数组变量名 [元素数量]Type
 }*/
 
 //用切片作为 map 的值 -既然一个 key 只能对应一个 value，而 value 又是一个原始类型，那么如果一个 key 要对应多个值怎么办？通过将 value 定义为 []int 类型或者其他类型的切片，就可以优雅的解决这个问题
-func main() {
+/*func main() {
 	mp1 := make(map[int][]int)
 	mp2 := make(map[int]*[]int)
 
@@ -863,4 +862,37 @@ func main() {
 	fmt.Println(a)
 	fmt.Println(mp1)
 	fmt.Println(mp2)
-}
+}*/
+
+/*func main() {
+	scene := make(map[string]int)
+
+	//单引号里面都是字符，只能有一个字符 双引号里面是字符串
+	scene["route"] = 55
+	scene["china"] = 53
+	scene["now"] = 52
+
+	fmt.Println(scene)
+
+	for k, v := range scene {
+		fmt.Println(k, v)
+	}
+
+	// 声明一个切片保存map数据
+	var sceneList []string
+
+	// 将map数据遍历复制到切片中
+	for k := range scene {
+		sceneList = append(sceneList, k)
+	}
+
+	// 对切片进行排序
+	sort.Strings(sceneList)
+
+	// 输出
+	fmt.Println(sceneList)
+
+	//删除
+	delete(scene, "route")
+	fmt.Println(scene)
+}*/
