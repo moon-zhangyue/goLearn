@@ -898,6 +898,23 @@ var 数组变量名 [元素数量]Type
 	fmt.Println(scene)
 }*/
 
+// 人员档案
+type Profile struct {
+	Name    string // 名字
+	Age     int    // 年龄
+	Married bool   // 已婚
+}
+
+func main() {
+	list := []*Profile{
+		{Name: "张三", Age: 30, Married: true},
+		{Name: "李四", Age: 21},
+		{Name: "王麻子", Age: 21},
+	}
+	buildIndex(list)
+	queryData("张三", 30)
+}
+
 func simpleHash(str string) (ret int) {
 
 	// 遍历字符串中的每一个ASCII字符
