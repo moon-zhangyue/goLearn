@@ -899,7 +899,7 @@ var 数组变量名 [元素数量]Type
 }*/
 
 // 人员档案
-/*type Profile struct {
+type Profile struct {
 	Name    string // 名字
 	Age     int    // 年龄
 	Married bool   // 已婚
@@ -913,20 +913,16 @@ func main() {
 	}
 	buildIndex(list)
 	queryData("张三", 30)
-}*/
+}
 
-/*
 func simpleHash(str string) (ret int) {
-
 	// 遍历字符串中的每一个ASCII字符
 	for i := 0; i < len(str); i++ {
 		// 取出字符
 		c := str[i]
-
 		// 将字符的ASCII码相加
 		ret += int(c)
 	}
-
 	return
 }
 
@@ -986,9 +982,9 @@ func queryData(name string, age int) {
 	// 没有查询到时, 打印结果
 	fmt.Println("no found")
 
-}*/
+}
 
-// 查询键
+/*// 查询键
 type queryKey struct {
 	Name string
 	Age  int
@@ -1029,7 +1025,7 @@ func queryData(name string, age int) {
 	} else {
 		fmt.Println("no found")
 	}
-}
+}*/
 
 /*
 代码量大大减少的关键是：Go语言的底层会为 map 的键自动构建哈希值。能够构建哈希值的类型必须是非动态类型、非指针、函数、闭包。
