@@ -1,6 +1,5 @@
 //demo测试
 package main // 声明 main 包
-import "fmt"
 
 //func main() { // 声明 main 主函数
 //fmt.Println("Hello World!") // 打印 Hello World!
@@ -923,7 +922,7 @@ func main() {
 	queryData("张三", 30)
 }
 
-func simpleHash(str string) (ret int) {
+/*func simpleHash(str string) (ret int) {
 	// 遍历字符串中的每一个ASCII字符
 	for i := 0; i < len(str); i++ {
 		// 取出字符
@@ -969,6 +968,7 @@ func buildIndex(list []*Profile) {
 	}
 }
 
+//查询逻辑 给定查询条件（名字、年龄）。 根据查询条件构建查询键。 查询键生成哈希值。 根据哈希值在索引中查找数据集合。 遍历数据集合逐个与条件比对。 获得结果。
 func queryData(name string, age int) {
 
 	// 根据给定查询条件构建查询键
@@ -990,7 +990,10 @@ func queryData(name string, age int) {
 	// 没有查询到时, 打印结果
 	fmt.Println("no found")
 
-}
+}*/
+
+//利用 map 特性的多键索引及查询
+//使用结构体进行多键索引和查询比传统的写法更为简单，最主要的区别是无须准备哈希函数及相应的字段无须做哈希合并
 
 /*// 查询键
 type queryKey struct {
