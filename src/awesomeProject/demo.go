@@ -1,8 +1,8 @@
 //demo测试
 package main // 声明 main 包
 import (
-	"container/list"
 	"fmt"
+	"unsafe"
 )
 
 //func main() { // 声明 main 主函数
@@ -1088,7 +1088,7 @@ sync.Map 不能使用 map 的方式进行取值和设置等操作，而是使用
 	fmt.Println(l)
 }*/
 
-func main() {
+/*func main() {
 	l := list.New()
 
 	//尾部添加
@@ -1122,4 +1122,41 @@ func main() {
 	for i := ll.Front(); i != nil; i = i.Next() {
 		fmt.Println(i.Value)
 	}
+}*/
+
+//布尔类型的零值（初始值）为 false，数值类型的零值为 0，字符串类型的零值为空字符串""，而指针、切片、映射、通道、函数和接口的零值则是 nil。
+func main() {
+	//nil 是 map、slice、pointer、channel、func、interface 的零值
+
+	//var m map[int]string
+	//var ptr *int
+	//var c chan int
+	//var sl []int
+	//var f func()
+	//var i interface{}
+	//
+	//fmt.Printf("%#v\n", m)
+	//fmt.Printf("%#v\n", ptr)
+	//fmt.Printf("%#v\n", c)
+	//fmt.Printf("%#v\n", sl)
+	//fmt.Printf("%#v\n", f)
+	//fmt.Printf("%#v\n", i)
+
+	var p *struct{}
+	fmt.Println(unsafe.Sizeof(p)) // 8
+
+	var s []int
+	fmt.Println(unsafe.Sizeof(s)) // 24
+
+	var m map[int]bool
+	fmt.Println(unsafe.Sizeof(m)) // 8
+
+	var c chan string
+	fmt.Println(unsafe.Sizeof(c)) // 8
+
+	var f func()
+	fmt.Println(unsafe.Sizeof(f)) // 8
+
+	var i interface{}
+	fmt.Println(unsafe.Sizeof(i)) // 16
 }
