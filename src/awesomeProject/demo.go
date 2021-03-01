@@ -1,8 +1,8 @@
 //demo测试
 package main // 声明 main 包
 import (
+	"container/list"
 	"fmt"
-	"sync"
 )
 
 //func main() { // 声明 main 主函数
@@ -1052,11 +1052,11 @@ func queryData(name string, age int) {
 /*
 sync.Map 有以下特性：
 无须初始化，直接声明即可。
-sync.Map 不能使用 map 的方式进行取值和设置等操作，而是使用 sync.Map 的方法进行调用，Store 表示存储，Load 表示获取，Delete 表示删除。
+sync.Map 不能使用 map 的方式进行取值和设置等操作，而是使用 sync.Map 的方法进行调用，Store 表示存储，Load 表示获取，Delete 表示删除。 sync.Map 不能使用 make 创建
 使用 Range 配合一个回调函数进行遍历操作，通过回调函数返回内部遍历出来的值，Range 参数中回调函数的返回值在需要继续迭代遍历时，返回 true，终止迭代遍历时，返回 false。
 */
 //sync.Map 没有提供获取 map 数量的方法，替代方法是在获取 sync.Map 时遍历自行计算数量，sync.Map 为了保证并发安全有一些性能损失，因此在非并发情况下，使用 map 相比使用 sync.Map 会有更好的性能。
-func main() {
+/*func main() {
 	var scene sync.Map
 
 	// 将键值对保存到sync.Map
@@ -1075,4 +1075,15 @@ func main() {
 		fmt.Println("iterate:", k, v)
 		return true
 	})
+}*/
+
+//list列表
+func main() {
+	l := list.New()
+
+	l.PushBack("first")
+	l.PushFront(123)
+
+	fmt.Printf("v%", l)
+	fmt.Println(l)
 }
