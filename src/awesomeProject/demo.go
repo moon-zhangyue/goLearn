@@ -1110,4 +1110,16 @@ func main() {
 
 	//使用
 	l.Remove(element)
+
+	ll := list.New()
+
+	//尾部添加
+	ll.PushBack("dudu")
+
+	//头部添加
+	ll.PushFront("haha")
+
+	for i := ll.Front(); i != nil; i = i.Next() {
+		fmt.Println(i.Value)
+	}
 }
