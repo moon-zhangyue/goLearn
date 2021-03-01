@@ -1,9 +1,5 @@
 //demo测试
 package main // 声明 main 包
-import (
-	"fmt"
-	"unsafe"
-)
 
 //func main() { // 声明 main 主函数
 //fmt.Println("Hello World!") // 打印 Hello World!
@@ -1125,7 +1121,7 @@ sync.Map 不能使用 map 的方式进行取值和设置等操作，而是使用
 }*/
 
 //布尔类型的零值（初始值）为 false，数值类型的零值为 0，字符串类型的零值为空字符串""，而指针、切片、映射、通道、函数和接口的零值则是 nil。
-func main() {
+/*func main() {
 	//nil 是 map、slice、pointer、channel、func、interface 的零值
 
 	//var m map[int]string
@@ -1159,4 +1155,33 @@ func main() {
 
 	var i interface{}
 	fmt.Println(unsafe.Sizeof(i)) // 16
-}
+}*/
+
+//make和new关键字的区别及实现原理  返回的永远是类型的指针，指针指向分配类型的内存地址
+/*func main() {
+	var sum *int
+	sum = new(int) //分配空间
+	*sum = 98
+
+	fmt.Println(*sum)
+
+	type Student struct {
+		name string
+		age  int
+	}
+
+	var s *Student
+	s = new(Student) //分配空间
+	s.name = "dequan"
+
+	fmt.Println(s)
+}*/
+
+/*
+Go语言中的 new 和 make 主要区别如下：
+make 只能用来分配及初始化类型为 slice、map、chan 的数据。new 可以分配任意类型的数据；
+new 分配返回的是指针，即类型 *Type。make 返回引用，即 Type；
+new 分配的空间被清零。make 分配空间后，会进行初始化。
+总结
+最后，简单总结一下Go语言中 make 和 new 关键字的实现原理，make 关键字的主要作用是创建 slice、map 和 Channel 等内置的数据结构，而 new 的主要作用是为类型申请一片内存空间，并返回指向这片内存的指针。
+*/
