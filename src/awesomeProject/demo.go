@@ -1078,7 +1078,7 @@ sync.Map 不能使用 map 的方式进行取值和设置等操作，而是使用
 }*/
 
 //list列表
-func main() {
+/*func main() {
 	l := list.New()
 
 	l.PushBack("first")
@@ -1086,4 +1086,28 @@ func main() {
 
 	fmt.Printf("v%", l)
 	fmt.Println(l)
+}*/
+
+func main() {
+	l := list.New()
+
+	//尾部添加
+	l.PushBack("tail")
+
+	//头部添加
+	l.PushFront("head")
+
+	//尾部添加后保存元素句柄
+	element := l.PushBack("first")
+
+	//在first之后添加high
+	l.InsertAfter("high", element)
+
+	//在first之前添加noon
+	l.InsertBefore("lalala", element)
+
+	fmt.Println(l)
+
+	//使用
+	l.Remove(element)
 }
