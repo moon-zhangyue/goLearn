@@ -1247,12 +1247,66 @@ err != nil 才是 if 的判断表达式，当 err 不为空时，打印错误并
 }*/
 
 //9*9 乘法表
-func main() {
+/*func main() {
 	for y := 1; y < 10; y++ {
 		for x := 1; x <= y; x++ {
 			fmt.Printf("%d*%d=%d ", x, y, x*y)
 		}
 		// 手动生成回车
 		fmt.Println()
+	}
+}*/
+
+//键值循环-for range
+//for range 可以遍历数组、切片、字符串、map 及通道（channel）  类似 foreach
+func main() {
+	//遍历切片
+	for key, value := range []int{1, 2, 3, 4} {
+		fmt.Printf("key:%d  value:%d\n", key, value)
+	}
+
+	//遍历字符串
+	var str = "hello 你好"
+	for key, value := range str {
+		fmt.Printf("key:%d value:0x%x\n", key, value)
+	}
+
+	//遍历map-对 map 遍历时，遍历输出的键值是无序的，如果需要有序的键值对输出，需要对结果进行排序。
+	m := map[string]int{
+		"hello": 100,
+		"world": 200,
+	}
+	for key, value := range m {
+		fmt.Println(key, value)
+	}
+
+	//遍历通道（channel）——接收通道数据
+	//for range 可以遍历通道（channel），但是通道在遍历时，只输出一个值，即管道内的类型对应的数据。
+	c := make(chan int)
+
+	go func() {
+		c <- 1
+		c <- 2
+		c <- 3
+		close(c)
+	}()
+
+	for v := range c {
+		fmt.Println(v)
+	}
+
+	/*
+		第 1 行创建了一个整型类型的通道。
+		第 3 行启动了一个 goroutine，其逻辑的实现体现在第 5～8 行，实现功能是往通道中推送数据 1、2、3，然后结束并关闭通道。
+		这段 goroutine 在声明结束后，在第 9 行马上被执行。
+		从第 11 行开始，使用 for range 对通道 c 进行遍历，其实就是不断地从通道中取数据，直到通道被关闭。
+	*/
+
+	map1 := map[string]int{
+		"hello": 100,
+		"world": 200,
+	}
+	for _, value := range map1 {
+		fmt.Println(value)
 	}
 }
