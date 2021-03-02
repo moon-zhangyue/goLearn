@@ -1322,4 +1322,19 @@ func main() {
 	default:
 		fmt.Println(3)
 	}
+
+	var b = "mum"
+	switch b {
+	case "mum", "daddy":
+		fmt.Println("family")
+	}
+
+	var s = "hello"
+	switch {
+	case s == "hello":
+		fmt.Println("hello")
+		fallthrough
+	case s != "world":
+		fmt.Println("world")
+	}
 }
