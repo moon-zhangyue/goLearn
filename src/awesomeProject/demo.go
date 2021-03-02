@@ -1,6 +1,5 @@
 //demo测试
 package main // 声明 main 包
-import "fmt"
 
 //func main() { // 声明 main 主函数
 //fmt.Println("Hello World!") // 打印 Hello World!
@@ -1311,7 +1310,7 @@ err != nil 才是 if 的判断表达式，当 err 不为空时，打印错误并
 	}
 }*/
 
-func main() {
+/*func main() {
 	var a = "hello"
 
 	switch a {
@@ -1337,4 +1336,26 @@ func main() {
 	case s != "world":
 		fmt.Println("world")
 	}
+}*/
+
+func main() {
+
+	//for x := 0; x < 10; x++ {
+	//
+	//	for y := 0; y < 10; y++ {
+	//
+	//		if y == 2 {
+	//			// 跳转到标签
+	//			goto breakHere
+	//		}
+	//
+	//	}
+	//}
+
+	// 手动返回, 避免执行进入标签
+	//return
+
+	// 标签
+	//breakHere:
+	//	fmt.Println("done")
 }
