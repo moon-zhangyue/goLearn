@@ -1,5 +1,6 @@
 //demo测试
 package main // 声明 main 包
+import "fmt"
 
 //func main() { // 声明 main 主函数
 //fmt.Println("Hello World!") // 打印 Hello World!
@@ -1212,7 +1213,7 @@ func Connect() (error, string) {
 err != nil 才是 if 的判断表达式，当 err 不为空时，打印错误并返回。
 这种写法可以将返回值与判断放在一行进行处理，而且返回值的作用范围被限制在 if 、 else 语句组合中。*/
 
-func main() {
+/*func main() {
 	//sum := 0
 	//for i := 1; i < 10; i++ {
 	//	sum += i
@@ -1242,5 +1243,16 @@ func main() {
 	var i int
 	for i <= 10 {
 		i++
+	}
+}*/
+
+//9*9 乘法表
+func main() {
+	for y := 1; y < 10; y++ {
+		for x := 1; x <= y; x++ {
+			fmt.Printf("%d*%d=%d ", x, y, x*y)
+		}
+		// 手动生成回车
+		fmt.Println()
 	}
 }
