@@ -1,5 +1,8 @@
 //demo测试
 package main // 声明 main 包
+import (
+	"fmt"
+)
 
 //func main() { // 声明 main 主函数
 //fmt.Println("Hello World!") // 打印 Hello World!
@@ -1185,3 +1188,29 @@ new 分配的空间被清零。make 分配空间后，会进行初始化。
 总结
 最后，简单总结一下Go语言中 make 和 new 关键字的实现原理，make 关键字的主要作用是创建 slice、map 和 Channel 等内置的数据结构，而 new 的主要作用是为类型申请一片内存空间，并返回指向这片内存的指针。
 */
+
+/*func main() {
+	var ten int = 11
+	if ten > 10 {
+		fmt.Println(">10")
+	} else {
+		fmt.Println("<=10")
+	}
+}*/
+
+//if 还有一种特殊的写法，可以在 if 表达式之前添加一个执行语句，再根据变量值进行判断，代码如下：
+//纯文本复制
+func main() {
+	if err1, err2 := Connect(); err1 == nil {
+		fmt.Println(err1)
+		fmt.Println(err2)
+		return
+	}
+}
+func Connect() (error, string) {
+	return nil, "error"
+}
+
+/*Connect 是一个带有返回值的函数，err := Connect() 是一个语句，执行 Connect 后，将错误保存到 err 变量中。
+err != nil 才是 if 的判断表达式，当 err 不为空时，打印错误并返回。
+这种写法可以将返回值与判断放在一行进行处理，而且返回值的作用范围被限制在 if 、 else 语句组合中。*/
