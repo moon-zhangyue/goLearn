@@ -1259,7 +1259,7 @@ err != nil 才是 if 的判断表达式，当 err 不为空时，打印错误并
 
 //键值循环-for range
 //for range 可以遍历数组、切片、字符串、map 及通道（channel）  类似 foreach
-func main() {
+/*func main() {
 	//遍历切片
 	for key, value := range []int{1, 2, 3, 4} {
 		fmt.Printf("key:%d  value:%d\n", key, value)
@@ -1295,12 +1295,12 @@ func main() {
 		fmt.Println(v)
 	}
 
-	/*
+
 		第 1 行创建了一个整型类型的通道。
 		第 3 行启动了一个 goroutine，其逻辑的实现体现在第 5～8 行，实现功能是往通道中推送数据 1、2、3，然后结束并关闭通道。
 		这段 goroutine 在声明结束后，在第 9 行马上被执行。
 		从第 11 行开始，使用 for range 对通道 c 进行遍历，其实就是不断地从通道中取数据，直到通道被关闭。
-	*/
+
 
 	map1 := map[string]int{
 		"hello": 100,
@@ -1308,5 +1308,18 @@ func main() {
 	}
 	for _, value := range map1 {
 		fmt.Println(value)
+	}
+}*/
+
+func main() {
+	var a = "hello"
+
+	switch a {
+	case "hello":
+		fmt.Println(1)
+	case "haha":
+		fmt.Println(2)
+	default:
+		fmt.Println(3)
 	}
 }
