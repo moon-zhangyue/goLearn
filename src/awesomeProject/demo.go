@@ -1,17 +1,9 @@
 //demo测试
 package main // 声明 main 包
 import (
-	"bufio"
 	"fmt"
-	"io"
-	"log"
-	"os"
-	"path/filepath"
-	"runtime"
 	"sort"
 	"strings"
-	"unicode"
-	"unicode/utf8"
 )
 
 //func main() { // 声明 main 主函数
@@ -1426,7 +1418,7 @@ OuterLoop:
 }*/
 
 //词频统计
-func main() {
+/*func main() {
 	if len(os.Args) == 1 || os.Args[1] == "-h" || os.Args[1] == "--help" {
 		fmt.Printf("usage: %s <file1> [<file2> [... <fileN>]]\n",
 			filepath.Base(os.Args[0]))
@@ -1534,4 +1526,111 @@ func reportByFrequency(wordsForFrequency map[int][]string) {
 		sort.Strings(words)
 		fmt.Printf("%*d %s\n", width, frequency, strings.Join(words, ", "))
 	}
+}*/
+
+//缩进排序
+var original = []string{
+	"Nonmetals",
+	"    Hydrogen",
+	"    Carbon",
+	"    Nitrogen",
+	"    Oxygen",
+	"Inner Transitionals",
+	"    Lanthanides",
+	"        Europium",
+	"        Cerium",
+	"    Actinides",
+	"        Uranium",
+	"        Plutonium",
+	"        Curium",
+	"Alkali Metals",
+	"    Lithium",
+	"    Sodium",
+	"    Potassium",
+}
+
+func main() {
+	fmt.Println("|     Original      |       Sorted      |")
+	fmt.Println("|-------------------|-------------------|")
+	sorted := SortedIndentedStrings(original) // 最初是 []string
+	for i := range original {                 // 在全局变量中设置
+		fmt.Printf("|%-19s|%-19s|\n", original[i], sorted[i])
+	}
+}
+
+func SortedIndentedStrings(slice []string) []string {
+	entries := populateEntries(slice)
+	return sortedEntries(entries)
+}
+
+func populateEntries(slice []string) Entries {
+	indent, indentSize := computeIndent(slice)
+	entries := make(Entries, 0)
+	for _, item := range slice {
+		i, level := 0, 0
+		for strings.HasPrefix(item[i:], indent) {
+			i += indentSize
+			level++
+		}
+		key := strings.ToLower(strings.TrimSpace(item))
+		addEntry(level, key, item, &entries)
+	}
+	return entries
+}
+
+func computeIndent(slice []string) (string, int) {
+	for _, item := range slice {
+		if len(item) > 0 && (item[0] == ' ' || item[0] == '\t') {
+			whitespace := rune(item[0])
+			for i, char := range item[1:] {
+				if char != whitespace {
+					i++
+					return strings.Repeat(string(whitespace), i), i
+				}
+			}
+		}
+	}
+	return "", 0
+}
+
+func addEntry(level int, key, value string, entries *Entries) {
+	if level == 0 {
+		*entries = append(*entries, Entry{key, value, make(Entries, 0)})
+	} else {
+		addEntry(level-1, key, value,
+			&((*entries)[entries.Len()-1].children))
+	}
+}
+
+func sortedEntries(entries Entries) []string {
+	var indentedSlice []string
+	sort.Sort(entries)
+	for _, entry := range entries {
+		populateIndentedStrings(entry, &indentedSlice)
+	}
+	return indentedSlice
+}
+
+func populateIndentedStrings(entry Entry, indentedSlice *[]string) {
+	*indentedSlice = append(*indentedSlice, entry.value)
+	sort.Sort(entry.children)
+	for _, child := range entry.children {
+		populateIndentedStrings(child, indentedSlice)
+	}
+}
+
+type Entry struct {
+	key      string
+	value    string
+	children Entries
+}
+type Entries []Entry
+
+func (entries Entries) Len() int { return len(entries) }
+
+func (entries Entries) Less(i, j int) bool {
+	return entries[i].key < entries[j].key
+}
+func (entries Entries) Swap(i, j int) {
+	entries[i], entries[j] = entries[j], entries[i]
 }
