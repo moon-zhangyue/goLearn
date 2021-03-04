@@ -1,5 +1,6 @@
 //demo测试
 package main // 声明 main 包
+import "fmt"
 
 //func main() { // 声明 main 主函数
 //fmt.Println("Hello World!") // 打印 Hello World!
@@ -1776,3 +1777,37 @@ func main() {
 	fmt.Println(a, b)
 	fmt.Println(c, d)
 }*/
+
+//将秒转化为具体时间
+const (
+	// 定义每分钟的秒数
+	SecondsPerMinute = 60
+
+	// 定义每小时的秒数
+	SecondsPerHour = SecondsPerMinute * 60
+
+	// 定义每天的秒数
+	SecondsPerDay = SecondsPerHour * 24
+)
+
+// 将传入的“秒”解析为3种时间单位
+func resolveTime(seconds int) (day int, hour int, minute int) {
+	day = seconds / SecondsPerDay
+	hour = seconds / SecondsPerHour
+	minute = seconds / SecondsPerMinute
+
+	return
+}
+
+func main() {
+	// 将返回值作为打印参数
+	fmt.Println(resolveTime(1000)) //fmt.Println() 使用了可变参数，可以接收不定量的参数。
+
+	// 只获取小时和分钟
+	_, hour, minute := resolveTime(18000)
+	fmt.Println(hour, minute)
+
+	// 只获取天
+	day, _, _ := resolveTime(90000)
+	fmt.Println(day)
+}
