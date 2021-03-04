@@ -1,6 +1,5 @@
 //demo测试
 package main // 声明 main 包
-import "fmt"
 
 //func main() { // 声明 main 主函数
 //fmt.Println("Hello World!") // 打印 Hello World!
@@ -1633,7 +1632,7 @@ func (entries Entries) Swap(i, j int) {
 
 //Go语言二分查找法
 //二分查找函数 //假设有序数组的顺序是从小到大（很关键，决定左右方向）
-func BinaryFind(arr *[]int, leftIndex int, rightIndex int, findVal int) {
+/*func BinaryFind(arr *[]int, leftIndex int, rightIndex int, findVal int) {
 	//判断 leftIndex是否大于rightIndex
 	if leftIndex > rightIndex {
 		fmt.Println("找不到")
@@ -1658,4 +1657,26 @@ func main() {
 	arr := []int{1, 2, 5, 7, 15, 25, 30, 36, 39, 51, 67, 78, 80, 82, 85, 91, 92, 97}
 	BinaryFind(&arr, 0, len(arr)-1, 30)
 	fmt.Println("main arr=", arr)
-}
+}*/
+
+/**
+冒泡排序
+*/
+/*func main() {
+	arr := [...]int{21, 32, 12, 33, 14, 6, 87, 24}
+	var n = len(arr)
+	fmt.Println("--------没排序前--------\n", arr)
+	for i := 0; i <= n-1; i++ {
+		fmt.Println("--------第", i+1, "次冒泡--------")
+		for j := i; j <= n-1; j++ {
+			if arr[i] > arr[j] {
+				t := arr[i]
+				arr[i] = arr[j]
+				arr[j] = t
+			}
+			fmt.Println(arr)
+
+		}
+	}
+	fmt.Println("--------最终结果--------\n", arr)
+}*/
