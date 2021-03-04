@@ -1,5 +1,10 @@
 //demo测试
 package main // 声明 main 包
+import (
+	"fmt"
+	"github.com/bwmarrin/snowflake"
+	"os"
+)
 
 //func main() { // 声明 main 主函数
 //fmt.Println("Hello World!") // 打印 Hello World!
@@ -1680,3 +1685,23 @@ func main() {
 	}
 	fmt.Println("--------最终结果--------\n", arr)
 }*/
+
+//go语言分布式id
+func main() {
+	//需要安装snowflake  go get github.com/bwmarrin/snowflake
+	n, err := snowflake.NewNode(1)
+	if err != nil {
+		println(err)
+		os.Exit(1)
+	}
+	for i := 0; i < 3; i++ {
+		id := n.Generate()
+		fmt.Println("id", id)
+		fmt.Println(
+			"node: ", id.Node(),
+			"step: ", id.Step(),
+			"time: ", id.Time(),
+			"\n",
+		)
+	}
+}
