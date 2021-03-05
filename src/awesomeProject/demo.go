@@ -2,7 +2,6 @@
 package main // 声明 main 包
 import (
 	"fmt"
-	"strings"
 )
 
 //func main() { // 声明 main 主函数
@@ -1887,7 +1886,7 @@ func main() {
 
 //字符串的链式处理——操作与数据分离的设计技巧
 // 字符串处理函数，传入字符串切片和处理链
-func StringProccess(list []string, chain []func(string) string) {
+/*func StringProccess(list []string, chain []func(string) string) {
 
 	// 遍历每一个字符串
 	for index, str := range list {
@@ -1939,4 +1938,15 @@ func main() {
 		fmt.Println(str)
 	}
 
+}*/
+
+//匿名函数
+// 使用f()调用
+func main() {
+	// 将匿名函数体保存到f()中
+	f := func(data int) {
+		fmt.Println("hello", data)
+	}
+
+	f(100)
 }
