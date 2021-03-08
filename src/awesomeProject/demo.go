@@ -1941,7 +1941,7 @@ func main() {
 }*/
 
 //匿名函数
-// 使用f()调用
+//使用f()调用
 func main() {
 	// 将匿名函数体保存到f()中
 	f := func(data int) {
