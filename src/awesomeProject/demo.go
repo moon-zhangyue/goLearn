@@ -1,8 +1,6 @@
 //demo测试
 package main // 声明 main 包
-import (
-	"fmt"
-)
+import "fmt"
 
 //func main() { // 声明 main 主函数
 //fmt.Println("Hello World!") // 打印 Hello World!
@@ -1942,7 +1940,7 @@ func main() {
 
 //匿名函数
 //使用f()调用
-func main() {
+/*func main() {
 	// 将匿名函数体保存到f()中
 	f := func(data int) {
 		fmt.Println("hello", data)
@@ -1950,4 +1948,18 @@ func main() {
 
 	f(100)
 	f(100)
+}*/
+
+// 遍历切片的每个元素, 通过给定函数进行元素访问
+func visit(list []int, f func(int)) {
+	for _, v := range list {
+		f(v)
+	}
+}
+
+func main() {
+	// 使用匿名函数打印切片内容
+	visit([]int{1, 2, 3, 4}, func(v int) {
+		fmt.Println(v)
+	})
 }
