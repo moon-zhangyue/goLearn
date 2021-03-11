@@ -1967,12 +1967,14 @@ func main() {
 //	})
 //}
 
+//定义命令行参数 skill，从命令行输入 --skill 可以将=后的字符串传入 skillParam 指针变量。
 var skillParam = flag.String("skill", "", "skill to perform")
 
 func main() {
 
 	flag.Parse()
 
+	//定义一个从字符串映射到 func() 的 map，然后填充这个 map。
 	var skill = map[string]func(){
 		"fire": func() {
 			fmt.Println("chicken fire")
@@ -1985,10 +1987,11 @@ func main() {
 		},
 	}
 
+	//skillParam 是一个 *string 类型的指针变量，使用 *skillParam 获取到命令行传过来的值，并在 map 中查找对应命令行参数指定的字符串的函数。
 	if f, ok := skill[*skillParam]; ok {
 		f()
 	} else {
 		fmt.Println("skill not found")
 	}
-
+	//go run demo.go --skill=fly
 }
