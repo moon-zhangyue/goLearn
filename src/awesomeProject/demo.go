@@ -1989,6 +1989,7 @@ func main() {
 
 	//skillParam 是一个 *string 类型的指针变量，使用 *skillParam 获取到命令行传过来的值，并在 map 中查找对应命令行参数指定的字符串的函数。
 	if f, ok := skill[*skillParam]; ok {
+		fmt.Println(skill[*skillParam])
 		f()
 	} else {
 		fmt.Println("skill not found")
