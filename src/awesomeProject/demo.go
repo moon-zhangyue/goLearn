@@ -1,9 +1,5 @@
 //demo测试
 package main // 声明 main 包
-import (
-	"flag"
-	"fmt"
-)
 
 //func main() { // 声明 main 主函数
 //fmt.Println("Hello World!") // 打印 Hello World!
@@ -1968,7 +1964,7 @@ func main() {
 //}
 
 //定义命令行参数 skill，从命令行输入 --skill 可以将=后的字符串传入 skillParam 指针变量。
-var skillParam = flag.String("skill", "", "skill to perform")
+/*var skillParam = flag.String("skill", "", "skill to perform")
 
 func main() {
 
@@ -1989,10 +1985,17 @@ func main() {
 
 	//skillParam 是一个 *string 类型的指针变量，使用 *skillParam 获取到命令行传过来的值，并在 map 中查找对应命令行参数指定的字符串的函数。
 	if f, ok := skill[*skillParam]; ok {
+		fmt.Println(skillParam)
+		fmt.Println(*skillParam)
+		fmt.Println(f)
+		fmt.Println(ok)
 		fmt.Println(skill[*skillParam])
 		f()
 	} else {
+		fmt.Println(f)
+		fmt.Println(ok)
+		fmt.Println(skill[*skillParam])
 		fmt.Println("skill not found")
 	}
 	//go run demo.go --skill=fly
-}
+}*/
