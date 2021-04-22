@@ -1,6 +1,9 @@
 //demo测试
 package main // 声明 main 包
-import "fmt"
+import (
+	"fmt"
+	"github.com/syyongx/php2go"
+)
 
 //func main() { // 声明 main 主函数
 //fmt.Println("Hello World!") // 打印 Hello World!
@@ -2046,4 +2049,6 @@ func main() {
 
 	// 使用接口调用FuncCaller.Call，内部会调用函数本体
 	invoker.Call("hello")
+
+	php2go.Round()
 }
