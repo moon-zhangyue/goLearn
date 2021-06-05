@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 //func main() {
 //var v1 int      // 整型
 //var v2 string   // 字符串
@@ -57,15 +59,29 @@ package main
 //
 //}
 
-const ( // iota 被重置为 0
-	c0 = iota // c0 = 0
-	c1 = iota // c1 = 1
-	c2 = iota // c2 = 2
-)
-const (
-	u = iota * 2 // u = 0
-	v = iota * 2 // v = 2
-	w = iota * 2 // w = 4
-)
-const x = iota // x = 0
-const y = iota // y = 0
+func main() {
+	//const ( // iota 被重置为 0
+	//	c0 = iota // c0 = 0
+	//	c1 = iota // c1 = 1
+	//	c2 = iota // c2 = 2
+	//)
+	//const (
+	//	u = iota * 2 // u = 0
+	//	v = iota * 2 // v = 2
+	//	w = iota * 2 // w = 4
+	//)
+	//const x = iota // x = 0
+	//const y = iota // y = 0
+
+	const (
+		Sunday = iota
+		Monday
+		Tuesday
+		Wednesday
+		Thursday
+		Friday
+		Saturday
+		numberOfDays
+	)
+	fmt.Println(Sunday, Monday, Tuesday)
+}
