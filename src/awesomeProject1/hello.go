@@ -83,5 +83,5 @@ func main() {
 		Saturday
 		numberOfDays
 	)
-	fmt.Println(Sunday, Monday, Tuesday)
+	fmt.Println(Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, numberOfDays)
 }
