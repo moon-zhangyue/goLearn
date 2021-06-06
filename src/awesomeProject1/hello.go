@@ -102,8 +102,39 @@ func main() {
 	//b := (false == 0)
 	//println(b)
 
-	intValue := 8
-	if intValue == 8 {
-		fmt.Printf("OK")
-	}
+	//intValue := 8
+	//if intValue == 8 {
+	//	fmt.Printf("OK")
+	//}
+
+	//var intValueBit uint8
+	//intValueBit = 255
+	//intValueBit = ^intValueBit // 按位取反
+	//fmt.Println(intValueBit)   // 0
+	//intValueBit = 1
+	//intValueBit = intValueBit << 3 // 左移 3 位，相当于乘以 2^3 = 8
+	//fmt.Println(intValueBit)       // 8
+
+	//floatValue4 := 0.1
+	//floatValue5 := 0.7
+	//floatValue6 := floatValue4 + floatValue5
+	//
+	//fmt.Println(floatValue6)
+	//var floatValue1 float32
+	//floatValue1 = 10
+	//floatValue2 := 10.0
+	//
+	//p := 0.00001
+	//// 判断 floatValue1 与 floatValue2 是否相等
+	//if math.Dim(float64(floatValue1), floatValue2) < p {
+	//	fmt.Println("floatValue1 和 floatValue2 相等")
+	//}
+
+	var str string      // 声明字符串变量
+	str = "Hello World" // 变量初始化
+	//str2 := "你好，学院君"    // 也可以同时进行声明和初始化
+	ch := str[0] // 取字符串的第一个字符
+	//还可以通过 Go 语言内置的len()函数获取指定字符串的长度，以及通过fmt包提供的Printf进行字符串格式化输出：
+	fmt.Printf("The length of \"%s\" is %d \n", str, len(str))
+	fmt.Printf("The first character of \"%s\" is %c.\n", str, ch)
 }
