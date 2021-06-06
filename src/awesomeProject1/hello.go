@@ -88,18 +88,22 @@ func main() {
 	//布尔类型
 	//Go 语言中的布尔类型与其他主流编程语言差不多，类型关键字为 bool，可赋值且只可以赋值为预定义常量 true 和 false。示例代码如下：
 
-	var v1 bool
-	v1 = true
-	v2 := (1 == 2) // v2 也会被推导为 bool 类型
+	//var v1 bool
+	//v1 = true
+	//v2 := (1 == 2) // v2 也会被推导为 bool 类型
 
-	println(v1, v2)
+	//println(v1, v2)
 
 	//不过通过表达式计算得到的布尔类型结果可以赋值给 Go 布尔类型变量：
+	//var b bool
+	//b = (1 != 0)              // 编译正确
+	//fmt.Println("Result:", b) // 打印结果为Result: true
 
-	var b bool
-	b = (1 != 0)              // 编译正确
-	fmt.Println("Result:", b) // 打印结果为Result: true
+	//b := (false == 0)
+	//println(b)
 
-	b := (false == 0)
-	println(b)
+	intValue := 8
+	if intValue == 8 {
+		fmt.Printf("OK")
+	}
 }
