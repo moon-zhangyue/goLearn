@@ -130,11 +130,31 @@ func main() {
 	//	fmt.Println("floatValue1 和 floatValue2 相等")
 	//}
 
-	var str string      // 声明字符串变量
+	/*var str string      // 声明字符串变量
 	str = "Hello World" // 变量初始化
 	//str2 := "你好，学院君"    // 也可以同时进行声明和初始化
 	ch := str[0] // 取字符串的第一个字符
 	//还可以通过 Go 语言内置的len()函数获取指定字符串的长度，以及通过fmt包提供的Printf进行字符串格式化输出：
 	fmt.Printf("The length of \"%s\" is %d \n", str, len(str))
-	fmt.Printf("The first character of \"%s\" is %c.\n", str, ch)
+	fmt.Printf("The first character of \"%s\" is %c.\n", str, ch)*/
+
+	results := `Search results for "Golang":
+		- Go
+		- Golang
+		Golang Programming
+		`
+	fmt.Printf("%s", results)
+
+	//str := "hello, world"
+	//str1 := str[:5]  // 获取索引5（不含）之前的子串
+	//str2 := str[7:]  // 获取索引7（含）之后的子串
+	//str3 := str[0:5] // 获取从索引0（含）到索引5（不含）之间的子串
+	//fmt.Println("str1:", str1)
+	//fmt.Println("str2:", str2)
+	//fmt.Println("str3:", str3)
+
+	str := "Hello, 世界"
+	for i, ch := range str {
+		fmt.Println(i, ch) // ch 的类型为 rune
+	}
 }
