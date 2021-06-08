@@ -220,23 +220,43 @@ func main() {
 	//fmt.Println(v10)
 	//fmt.Println(q)
 
-	var a [8]byte           // 长度为8的数组，每个元素为一个字节
-	var b [3][3]int         // 二维数组（9宫格）
-	var c [3][3][3]float64  // 三维数组（立体的9宫格）
-	var d = [3]int{1, 2, 3} // 声明时初始化
-	var e = new([3]string)  // 通过 new 初始化
+	//var a [8]byte           // 长度为8的数组，每个元素为一个字节
+	//var b [3][3]int         // 二维数组（9宫格）
+	//var c [3][3][3]float64  // 三维数组（立体的9宫格）
+	//var d = [3]int{1, 2, 3} // 声明时初始化
+	//var e = new([3]string)  // 通过 new 初始化
+	//
+	//m := [5]int{1, 2, 3}
+	//fmt.Println(m)
+	//
+	//fmt.Println(a)
+	//fmt.Println(b)
+	//fmt.Println(c)
+	//fmt.Println(d)
+	//fmt.Println(e)
+	//
+	//var arr = [5]int{1, 2, 3, 4, 5}
+	//for i, v := range arr {
+	//	fmt.Println("Element", i, "of arr is", v)
+	//}
 
-	m := [5]int{1, 2, 3}
-	fmt.Println(m)
-
-	fmt.Println(a)
-	fmt.Println(b)
-	fmt.Println(c)
-	fmt.Println(d)
-	fmt.Println(e)
-
-	var arr = [5]int{1, 2, 3, 4, 5}
-	for i, v := range arr {
-		fmt.Println("Element", i, "of arr is", v)
+	// 通过二维数组生成九九乘法表
+	var multi [9][9]string
+	for j := 0; j < 9; j++ {
+		for i := 0; i < 9; i++ {
+			n1 := i + 1
+			n2 := j + 1
+			if n1 < n2 { // 摒除重复的记录
+				continue
+			}
+			multi[i][j] = fmt.Sprintf("%dx%d=%d", n2, n1, n1*n2)
+		}
+	}
+	// 打印九九乘法表
+	for _, v1 := range multi {
+		for _, v2 := range v1 {
+			fmt.Printf("%-8s", v2) // 位宽为8，左对齐
+		}
+		fmt.Println()
 	}
 }
