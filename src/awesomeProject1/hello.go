@@ -155,6 +155,6 @@ func main() {
 
 	str := "Hello, 世界"
 	for i, ch := range str {
-		fmt.Println(i, ch) // ch 的类型为 rune
+		fmt.Println(i, string(ch)) // ch 的类型为 rune 将 Unicode 编码转化为可打印字符string
 	}
 }

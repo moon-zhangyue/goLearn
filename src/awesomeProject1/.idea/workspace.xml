@@ -2,18 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c3f7ae0-bb4b-40ef-bfda-4acd6f0a3e2f" name="默认更改列表" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/awesomeProject1.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello.go" beforeDir="false" afterPath="$PROJECT_DIR$/hello.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="GOROOT" url="file://$PROJECT_DIR$/../../../go" />
+  <component name="GOROOT" path="C:/Program Files/Go" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
@@ -33,13 +29,12 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="configurable..is.expanded" value="false" />
     <property name="configurable.GoLibrariesConfigurable.is.expanded" value="true" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.goide.configuration.GoLibrariesConfigurableProvider" />
   </component>
   <component name="RunManager">
@@ -57,9 +52,19 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4c3f7ae0-bb4b-40ef-bfda-4acd6f0a3e2f" name="默认更改列表" comment="" />
+      <created>1623136972253</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1623136972253</updated>
+    </task>
+    <servers />
+  </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -78,5 +83,27 @@
     <MESSAGE value="refactor(匿名函数):" />
     <MESSAGE value="perf(常量设定):" />
     <option name="LAST_COMMIT_MESSAGE" value="perf(常量设定):" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="752" y="446" key="#GOROOT" timestamp="1623137019595">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="752" y="446" key="#GOROOT/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623137019595" />
+    <state width="565" height="891" key="GridCell.Tab.0.bottom" timestamp="1623137061204">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="565" height="891" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623137061204" />
+    <state width="565" height="891" key="GridCell.Tab.0.center" timestamp="1623137061204">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="565" height="891" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623137061204" />
+    <state width="565" height="891" key="GridCell.Tab.0.left" timestamp="1623137061204">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="565" height="891" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623137061204" />
+    <state width="565" height="891" key="GridCell.Tab.0.right" timestamp="1623137061204">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="565" height="891" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623137061204" />
   </component>
 </project>
