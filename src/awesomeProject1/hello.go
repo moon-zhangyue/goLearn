@@ -163,16 +163,31 @@ func main() {
 	//v1 := uint(255)
 	//v2 := int8(v1) // v2 = -1
 
-	v1 := 99.99
-	v2 := int(v1) // v2 = 99
+	//v1 := 99.99
+	//v2 := int(v1) // v2 = 99
+	//
+	//fmt.Println(v1)
+	//fmt.Println(v2)
+	////将整型转化为浮点型时，比较简单，直接调用对应的函数即可：
+	//
+	//v3 := 99
+	//v4 := float64(v2) // v4 = 99
+	//
+	//fmt.Println(v3)
+	//fmt.Println(v4)
 
-	fmt.Println(v1)
+	//v1 := 65
+	//v2 := string(v1)  // v2 = A
+	//v3 := 30028
+	//v4 := string(v3)  // v4 = 界
+	//
+	//fmt.Println(v2)
+	//fmt.Println(v4)
+
+	v1 := []byte{'h', 'e', 'l', 'l', 'o'}
+	v2 := string(v1) // v2 = hello
+	v3 := []rune{0x5b66, 0x9662, 0x541b}
+	v4 := string(v3) // v4 = 学院君
 	fmt.Println(v2)
-	//将整型转化为浮点型时，比较简单，直接调用对应的函数即可：
-
-	v3 := 99
-	v4 := float64(v2) // v4 = 99
-
-	fmt.Println(v3)
 	fmt.Println(v4)
 }
