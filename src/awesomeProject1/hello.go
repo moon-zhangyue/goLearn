@@ -137,13 +137,13 @@ func main() {
 	//还可以通过 Go 语言内置的len()函数获取指定字符串的长度，以及通过fmt包提供的Printf进行字符串格式化输出：
 	fmt.Printf("The length of \"%s\" is %d \n", str, len(str))
 	fmt.Printf("The first character of \"%s\" is %c.\n", str, ch)*/
-
-	results := `Search results for "Golang":
-		- Go
-		- Golang
-		Golang Programming
-		`
-	fmt.Printf("%s", results)
+	//
+	//results := `Search results for "Golang":
+	//	- Go
+	//	- Golang
+	//	Golang Programming
+	//	`
+	//fmt.Printf("%s", results)
 
 	//str := "hello, world"
 	//str1 := str[:5]  // 获取索引5（不含）之前的子串
@@ -153,8 +153,26 @@ func main() {
 	//fmt.Println("str2:", str2)
 	//fmt.Println("str3:", str3)
 
-	str := "Hello, 世界"
-	for i, ch := range str {
-		fmt.Println(i, string(ch)) // ch 的类型为 rune 将 Unicode 编码转化为可打印字符string
-	}
+	//str := "Hello, 世界"
+	//for i, ch := range str {
+	//	fmt.Println(i, string(ch)) // ch 的类型为 rune 将 Unicode 编码转化为可打印字符string
+	//}
+
+	//v1 := uint(-255)
+
+	//v1 := uint(255)
+	//v2 := int8(v1) // v2 = -1
+
+	v1 := 99.99
+	v2 := int(v1) // v2 = 99
+
+	fmt.Println(v1)
+	fmt.Println(v2)
+	//将整型转化为浮点型时，比较简单，直接调用对应的函数即可：
+
+	v3 := 99
+	v4 := float64(v2) // v4 = 99
+
+	fmt.Println(v3)
+	fmt.Println(v4)
 }
