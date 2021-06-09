@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 //func main() {
 //var v1 int      // 整型
@@ -346,17 +348,71 @@ func main() {
 	//fmt.Println("slice1:", slice1)
 	//fmt.Println("slice2:", slice2)
 
-	var testMap map[string]int
-	testMap = map[string]int{
-		"one":   1,
-		"two":   2,
-		"three": 3,
-	}
-	k := "two"
-	v, ok := testMap[k]
-	if ok {
-		fmt.Printf("The element of key %q: %d\n", k, v)
-	} else {
-		fmt.Println("Not found!")
-	}
+	//var testMap map[string]int
+	//testMap = map[string]int{
+	//	"one":   1,
+	//	"two":   2,
+	//	"three": 3,
+	//}
+	//k := "two"
+	//v, ok := testMap[k]
+	//if ok {
+	//	fmt.Printf("The element of key %q: %d\n", k, v)
+	//} else {
+	//	fmt.Println("Not found!")
+	//}
+
+	//var testMap = make(map[string]int)
+	//
+	//testMap["a"] = 1
+	//testMap["d"] = 2
+	//testMap["c"] = 4
+	//testMap["b"] = 3
+	//
+	//fmt.Println(testMap)
+	//
+	//for _, val := range testMap {
+	//	fmt.Println(val)
+	//}
+
+	//map1 := make(map[int]string, 3)
+	//
+	//for k, v := range testMap {
+	//	map1[v] = k
+	//}
+
+	//for k, v := range testMap {
+	//	fmt.Println(k, v)
+	//}
+	//
+	//keys := make([]string, 0)
+	//for k, _ := range testMap {
+	//	keys = append(keys, k)
+	//}
+	//fmt.Println(keys)
+	//sort.Strings(keys) // 对键进行排序(keys) // 对键进行排序
+	//fmt.Println("Sorted map by key:")
+	//
+	//fmt.Println(keys)
+	//for _, k := range keys {
+	//	fmt.Println(k, testMap[k])
+	//}
+	//
+	//values := make([]int, 0)
+	//for _, v := range testMap {
+	//	values = append(values, v)
+	//}
+	//
+	//sort.Ints(values)   // 对值进行排序
+	//
+	//fmt.Println("Sorted map by value:")
+	//for _, v := range values  {
+	//	fmt.Println(map1[v], v)
+	//}
+
+	a := 100
+	var ptr *int // 声明指针类型
+	ptr = &a     // 初始化指针类型值为变量 a
+	fmt.Println(ptr)
+	fmt.Println(*ptr)
 }
