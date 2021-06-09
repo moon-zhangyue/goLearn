@@ -241,22 +241,57 @@ func main() {
 	//}
 
 	// 通过二维数组生成九九乘法表
-	var multi [9][9]string
-	for j := 0; j < 9; j++ {
-		for i := 0; i < 9; i++ {
-			n1 := i + 1
-			n2 := j + 1
-			if n1 < n2 { // 摒除重复的记录
-				continue
-			}
-			multi[i][j] = fmt.Sprintf("%dx%d=%d", n2, n1, n1*n2)
-		}
-	}
-	// 打印九九乘法表
-	for _, v1 := range multi {
-		for _, v2 := range v1 {
-			fmt.Printf("%-8s", v2) // 位宽为8，左对齐
-		}
-		fmt.Println()
-	}
+	//var multi [9][9]string
+	//for j := 0; j < 9; j++ {
+	//	for i := 0; i < 9; i++ {
+	//		n1 := i + 1
+	//		n2 := j + 1
+	//		if n1 < n2 { // 摒除重复的记录
+	//			continue
+	//		}
+	//		multi[i][j] = fmt.Sprintf("%dx%d=%d", n2, n1, n1*n2)
+	//	}
+	//}
+	//// 打印九九乘法表
+	//for _, v1 := range multi {
+	//	for _, v2 := range v1 {
+	//		fmt.Printf("%-8s", v2) // 位宽为8，左对齐
+	//	}
+	//	fmt.Println()
+	//}
+
+	//var slice []string = []string{"a", "b", "c"}
+
+	//fmt.Println(slice)
+
+	// 先定义一个数组
+	months := [...]string{"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"}
+	// 基于数组创建切片
+	q2 := months[3:6]     // 第二季度
+	summer := months[5:8] // 夏季
+	fmt.Println(q2)
+	fmt.Println(summer)
+
+	fmt.Println(len(q2)) // 3
+	fmt.Println(cap(q2)) // 9
+
+	firsthalf := months[:6]
+	q1 := firsthalf[:3] // 基于 firsthalf 的前 3 个元素构建新切片
+
+	fmt.Println(q1)
+	fmt.Println(firsthalf)
+
+	q3 := firsthalf[:9]
+
+	fmt.Println(q3)
+
+	mySlice := make([]int, 5)
+	mySlice1 := make([]int, 5, 10)
+
+	fmt.Println(mySlice)
+	fmt.Println(mySlice1)
+
+	aa := []int{1, 2, 3, 4, 5}
+	fmt.Println(aa)
+
 }

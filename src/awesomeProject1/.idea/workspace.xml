@@ -51,11 +51,14 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="configurable..is.expanded" value="false" />
+    <property name="configurable.Global.GOPATH.is.expanded" value="true" />
     <property name="configurable.GoLibrariesConfigurable.is.expanded" value="true" />
+    <property name="configurable.Module.GOPATH.is.expanded" value="false" />
+    <property name="configurable.Project.GOPATH.is.expanded" value="true" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../go-fastdfs" />
-    <property name="settings.editor.selected.configurable" value="com.goide.configuration.GoLibrariesConfigurableProvider" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunManager">
     <configuration name="go build hello.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
@@ -95,7 +98,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623143457630</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="string">
+      <created>1623144473281</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1623144473281</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,25 +139,33 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623142487847" />
-    <state width="565" height="891" key="GridCell.Tab.0.bottom" timestamp="1623143983134">
+    <state width="565" height="891" key="GridCell.Tab.0.bottom" timestamp="1623216618902">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="565" height="891" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623143983134" />
-    <state width="565" height="891" key="GridCell.Tab.0.center" timestamp="1623143983131">
+    <state width="565" height="891" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623216618902" />
+    <state width="565" height="891" key="GridCell.Tab.0.center" timestamp="1623216618902">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="565" height="891" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623143983131" />
-    <state width="565" height="891" key="GridCell.Tab.0.left" timestamp="1623143983129">
+    <state width="565" height="891" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623216618902" />
+    <state width="565" height="891" key="GridCell.Tab.0.left" timestamp="1623216618902">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="565" height="891" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623143983129" />
-    <state width="565" height="891" key="GridCell.Tab.0.right" timestamp="1623143983133">
+    <state width="565" height="891" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623216618902" />
+    <state width="565" height="891" key="GridCell.Tab.0.right" timestamp="1623216618902">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="565" height="891" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623143983133" />
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1623143458797">
+    <state width="565" height="891" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623216618902" />
+    <state x="461" y="164" key="SettingsEditor" timestamp="1623144567611">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623143458797" />
+    <state x="461" y="164" key="SettingsEditor/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623144567611" />
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1623144474631">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623144474631" />
+    <state x="752" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1623202748439">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="752" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623202748439" />
   </component>
 </project>
