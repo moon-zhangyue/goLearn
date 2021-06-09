@@ -314,4 +314,16 @@ func main() {
 	newSlice1 := []int{1, 2, 3, 4, 5}
 	newSlice := append(Slice, newSlice1...) //...不可省略
 	fmt.Println(newSlice)
+
+	slice1 := []int{1, 2, 3, 4, 5}
+	slice2 := []int{5, 4, 3}
+	// 复制 slice1 到 slice 2
+	copy(slice2, slice1) // 只会复制 slice1 的前3个元素到 slice2 中
+	// slice2 结果: [1, 2, 3]
+	// 复制 slice2 到 slice 1
+	copy(slice1, slice2) // 只会复制 slice2 的 3 个元素到 slice1 的前 3 个位置
+	// slice1 结果：[5, 4, 3, 4, 5]
+
+	fmt.Println(slice1)
+	fmt.Println(slice2)
 }
