@@ -294,4 +294,11 @@ func main() {
 	aa := []int{1, 2, 3, 4, 5}
 	fmt.Println(aa)
 
+	for i := 0; i < len(summer); i++ {
+		fmt.Println("summer[", i, "]", summer[i])
+	}
+
+	for i, v := range summer {
+		fmt.Println(i, v)
+	}
 }
