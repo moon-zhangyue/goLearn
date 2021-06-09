@@ -265,40 +265,53 @@ func main() {
 	//fmt.Println(slice)
 
 	// 先定义一个数组
-	months := [...]string{"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"}
-	// 基于数组创建切片
-	q2 := months[3:6]     // 第二季度
-	summer := months[5:8] // 夏季
-	fmt.Println(q2)
-	fmt.Println(summer)
+	//months := [...]string{"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"}
+	//// 基于数组创建切片
+	//q2 := months[3:6]     // 第二季度
+	//summer := months[5:8] // 夏季
+	//fmt.Println(q2)
+	//fmt.Println(summer)
+	//
+	//fmt.Println(len(q2)) // 3
+	//fmt.Println(cap(q2)) // 9
+	//
+	//firsthalf := months[:6]
+	//q1 := firsthalf[:3] // 基于 firsthalf 的前 3 个元素构建新切片
+	//
+	//fmt.Println(q1)
+	//fmt.Println(firsthalf)
+	//
+	//q3 := firsthalf[:9]
+	//
+	//fmt.Println(q3)
+	//
+	//mySlice := make([]int, 5)
+	//mySlice1 := make([]int, 5, 10)
+	//
+	//fmt.Println(mySlice)
+	//fmt.Println(mySlice1)
+	//
+	//aa := []int{1, 2, 3, 4, 5}
+	//fmt.Println(aa)
+	//
+	//for i := 0; i < len(summer); i++ {
+	//	fmt.Println("summer[", i, "]", summer[i])
+	//}
+	//
+	//for i, v := range summer {
+	//	fmt.Println(i, v)
+	//}
 
-	fmt.Println(len(q2)) // 3
-	fmt.Println(cap(q2)) // 9
+	var Slice = make([]int, 5, 10)
 
-	firsthalf := months[:6]
-	q1 := firsthalf[:3] // 基于 firsthalf 的前 3 个元素构建新切片
+	fmt.Println((Slice))
+	fmt.Println(len(Slice))
+	fmt.Println(cap(Slice))
 
-	fmt.Println(q1)
-	fmt.Println(firsthalf)
+	//newSlice := append(Slice, 1, 2, 3)
+	//fmt.Println(newSlice)
 
-	q3 := firsthalf[:9]
-
-	fmt.Println(q3)
-
-	mySlice := make([]int, 5)
-	mySlice1 := make([]int, 5, 10)
-
-	fmt.Println(mySlice)
-	fmt.Println(mySlice1)
-
-	aa := []int{1, 2, 3, 4, 5}
-	fmt.Println(aa)
-
-	for i := 0; i < len(summer); i++ {
-		fmt.Println("summer[", i, "]", summer[i])
-	}
-
-	for i, v := range summer {
-		fmt.Println(i, v)
-	}
+	newSlice1 := []int{1, 2, 3, 4, 5}
+	newSlice := append(Slice, newSlice1...) //...不可省略
+	fmt.Println(newSlice)
 }
