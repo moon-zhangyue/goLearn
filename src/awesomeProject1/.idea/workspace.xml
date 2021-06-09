@@ -19,7 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c3f7ae0-bb4b-40ef-bfda-4acd6f0a3e2f" name="默认更改列表" comment="切片赋复制">
+    <list default="true" id="4c3f7ae0-bb4b-40ef-bfda-4acd6f0a3e2f" name="默认更改列表" comment="切片内存共享">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hello.go" beforeDir="false" afterPath="$PROJECT_DIR$/hello.go" afterDir="false" />
     </list>
@@ -133,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623221323820</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="切片内存共享">
+      <created>1623223476297</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1623223476297</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,7 +165,8 @@
     <MESSAGE value="string" />
     <MESSAGE value="切片" />
     <MESSAGE value="切片赋复制" />
-    <option name="LAST_COMMIT_MESSAGE" value="切片赋复制" />
+    <MESSAGE value="切片内存共享" />
+    <option name="LAST_COMMIT_MESSAGE" value="切片内存共享" />
   </component>
   <component name="WindowStateProjectService">
     <state x="752" y="446" key="#GOROOT" timestamp="1623137019595">
@@ -169,30 +177,30 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623142487847" />
-    <state width="565" height="891" key="GridCell.Tab.0.bottom" timestamp="1623222160771">
+    <state width="565" height="891" key="GridCell.Tab.0.bottom" timestamp="1623225066932">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="565" height="891" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623222160771" />
-    <state width="565" height="891" key="GridCell.Tab.0.center" timestamp="1623222160770">
+    <state width="565" height="891" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623225066932" />
+    <state width="565" height="891" key="GridCell.Tab.0.center" timestamp="1623225066932">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="565" height="891" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623222160770" />
-    <state width="565" height="891" key="GridCell.Tab.0.left" timestamp="1623222160770">
+    <state width="565" height="891" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623225066932" />
+    <state width="565" height="891" key="GridCell.Tab.0.left" timestamp="1623225066931">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="565" height="891" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623222160770" />
-    <state width="565" height="891" key="GridCell.Tab.0.right" timestamp="1623222160770">
+    <state width="565" height="891" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623225066931" />
+    <state width="565" height="891" key="GridCell.Tab.0.right" timestamp="1623225066932">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="565" height="891" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623222160770" />
+    <state width="565" height="891" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623225066932" />
     <state x="461" y="164" key="SettingsEditor" timestamp="1623144567611">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="164" key="SettingsEditor/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623144567611" />
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1623221325270">
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1623223477829">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623221325270" />
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623223477829" />
     <state x="752" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1623202748439">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

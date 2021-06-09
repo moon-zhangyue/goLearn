@@ -340,10 +340,23 @@ func main() {
 	//slice6 := append(slice3[:0], slice3[:7]...) // 删除最后三个元素
 	//slice7 := slice3[:copy(slice3, slice3[3:])] // 删除开头前三个元素
 
-	slice1 := []int{1, 2, 3, 4, 5}
-	slice2 := slice1[1:3]
-	slice2[1] = 6
-	fmt.Println("slice1:", slice1)
-	fmt.Println("slice2:", slice2)
+	//slice1 := []int{1, 2, 3, 4, 5}
+	//slice2 := slice1[1:3]
+	//slice2[1] = 6
+	//fmt.Println("slice1:", slice1)
+	//fmt.Println("slice2:", slice2)
 
+	var testMap map[string]int
+	testMap = map[string]int{
+		"one":   1,
+		"two":   2,
+		"three": 3,
+	}
+	k := "two"
+	v, ok := testMap[k]
+	if ok {
+		fmt.Printf("The element of key %q: %d\n", k, v)
+	} else {
+		fmt.Println("Not found!")
+	}
 }
