@@ -302,28 +302,48 @@ func main() {
 	//	fmt.Println(i, v)
 	//}
 
-	var Slice = make([]int, 5, 10)
-
-	fmt.Println((Slice))
-	fmt.Println(len(Slice))
-	fmt.Println(cap(Slice))
-
-	//newSlice := append(Slice, 1, 2, 3)
+	//var Slice = make([]int, 5, 10)
+	//
+	//fmt.Println((Slice))
+	//fmt.Println(len(Slice))
+	//fmt.Println(cap(Slice))
+	//
+	////newSlice := append(Slice, 1, 2, 3)
+	////fmt.Println(newSlice)
+	//
+	//newSlice1 := []int{1, 2, 3, 4, 5}
+	//newSlice := append(Slice, newSlice1...) //...不可省略
 	//fmt.Println(newSlice)
+	//
+	//slice1 := []int{1, 2, 3, 4, 5}
+	//slice2 := []int{5, 4, 3}
+	//// 复制 slice1 到 slice 2
+	////copy(slice2, slice1) // 只会复制 slice1 的前3个元素到 slice2 中
+	//// slice2 结果: [1, 2, 3]
+	//fmt.Println(slice2)
+	//// 复制 slice2 到 slice 1
+	//copy(slice1, slice2) // 只会复制 slice2 的 3 个元素到 slice1 的前 3 个位置
+	//// slice1 结果：[5, 4, 3, 4, 5]
+	//fmt.Println(slice1)
 
-	newSlice1 := []int{1, 2, 3, 4, 5}
-	newSlice := append(Slice, newSlice1...) //...不可省略
-	fmt.Println(newSlice)
+	//slice3 := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+	//slice3 = slice3[:len(slice3)-5] // 删除 slice3 尾部 5 个元素
+	//slice3 = slice3[5:]             // 删除 slice3 头部 5 个元素
+	//fmt.Println(slice3)
+	//fmt.Println(len(slice3))
+	//fmt.Println(cap(slice3))
+
+	//slice3 := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+	//fmt.Println(slice3[:0])
+	//slice4 := append(slice3[:0], slice3[3:]...) // 删除开头三个元素
+	//slice5 := append(slice3[:1], slice3[4:]...) // 删除中间三个元素
+	//slice6 := append(slice3[:0], slice3[:7]...) // 删除最后三个元素
+	//slice7 := slice3[:copy(slice3, slice3[3:])] // 删除开头前三个元素
 
 	slice1 := []int{1, 2, 3, 4, 5}
-	slice2 := []int{5, 4, 3}
-	// 复制 slice1 到 slice 2
-	copy(slice2, slice1) // 只会复制 slice1 的前3个元素到 slice2 中
-	// slice2 结果: [1, 2, 3]
-	// 复制 slice2 到 slice 1
-	copy(slice1, slice2) // 只会复制 slice2 的 3 个元素到 slice1 的前 3 个位置
-	// slice1 结果：[5, 4, 3, 4, 5]
+	slice2 := slice1[1:3]
+	slice2[1] = 6
+	fmt.Println("slice1:", slice1)
+	fmt.Println("slice2:", slice2)
 
-	fmt.Println(slice1)
-	fmt.Println(slice2)
 }
