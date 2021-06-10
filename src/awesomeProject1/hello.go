@@ -468,14 +468,20 @@ func main() {
 	//}
 	//
 	//fmt.Println(sum)
-	sum := 0
-	i := 0
-	for {
-		i++
-		if i > 100 {
-			break
-		}
-		sum += i
+	//sum := 0
+	//i := 0
+	//for {
+	//	i++
+	//	if i > 100 {
+	//		break
+	//	}
+	//	sum += i
+	//}
+	//fmt.Println(sum)
+
+	a := []int{1, 2, 3, 4, 5, 6}
+	for i, j := 0, len(a)-1; i < j; i, j = i+1, j-1 {
+		a[i], a[j] = a[j], a[i]
 	}
-	fmt.Println(sum)
+	fmt.Println(a)
 }
