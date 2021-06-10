@@ -19,8 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c3f7ae0-bb4b-40ef-bfda-4acd6f0a3e2f" name="默认更改列表" comment="指针操作">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="4c3f7ae0-bb4b-40ef-bfda-4acd6f0a3e2f" name="默认更改列表" comment="switch 分支">
       <change beforePath="$PROJECT_DIR$/hello.go" beforeDir="false" afterPath="$PROJECT_DIR$/hello.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -154,7 +153,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623315332121</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="switch 分支">
+      <created>1623316496876</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1623316496876</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -182,7 +188,8 @@
     <MESSAGE value="切片内存共享" />
     <MESSAGE value="字典" />
     <MESSAGE value="指针操作" />
-    <option name="LAST_COMMIT_MESSAGE" value="指针操作" />
+    <MESSAGE value="switch 分支" />
+    <option name="LAST_COMMIT_MESSAGE" value="switch 分支" />
   </component>
   <component name="WindowStateProjectService">
     <state x="752" y="446" key="#GOROOT" timestamp="1623137019595">
@@ -213,10 +220,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="164" key="SettingsEditor/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623144567611" />
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1623315750316">
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1623316498097">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623315750316" />
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623316498097" />
     <state x="752" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1623294912904">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
