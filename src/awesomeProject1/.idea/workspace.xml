@@ -19,21 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c3f7ae0-bb4b-40ef-bfda-4acd6f0a3e2f" name="默认更改列表" comment="流程控制">
-      <change afterPath="$PROJECT_DIR$/.idea/awesomeProject1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymath/mymath.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../awesomeProject2/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../awesomeProject2/.idea/awesomeProject2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../awesomeProject2/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../awesomeProject2/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../awesomeProject2/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../awesomeProject2/hello.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../awesomeProject2/pac/pac.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../awesomeProject2/pac/pac2.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pac/pac.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../pac/pac2.go" afterDir="false" />
+    <list default="true" id="4c3f7ae0-bb4b-40ef-bfda-4acd6f0a3e2f" name="默认更改列表" comment="引入包">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hello.go" beforeDir="false" afterPath="$PROJECT_DIR$/hello.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +70,7 @@
     <property name="configurable.Project.GOPATH.is.expanded" value="true" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="com.goide.configuration.GoLibrariesConfigurableProvider" />
   </component>
@@ -216,7 +203,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623375476831</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="引入包">
+      <created>1623390350634</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1623390350634</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,7 +242,8 @@
     <MESSAGE value="switch 分支" />
     <MESSAGE value="循环语句" />
     <MESSAGE value="流程控制" />
-    <option name="LAST_COMMIT_MESSAGE" value="流程控制" />
+    <MESSAGE value="引入包" />
+    <option name="LAST_COMMIT_MESSAGE" value="引入包" />
   </component>
   <component name="WindowStateProjectService">
     <state x="752" y="446" key="#GOROOT" timestamp="1623137019595">
@@ -259,10 +254,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="657" y="137" key="#go_build_hello.go/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623377922868" />
-    <state x="894" y="262" key="FileChooserDialogImpl" timestamp="1623381826022">
+    <state x="894" y="262" key="FileChooserDialogImpl" timestamp="1623390990846">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="894" y="262" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623381826022" />
+    <state x="894" y="262" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623390990846" />
     <state width="565" height="475" key="GridCell.Tab.0.bottom" timestamp="1623390203823">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -299,10 +294,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="241" y="151" key="SettingsEditor/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623382205342" />
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1623375547817">
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1623390974603">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623375547817" />
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623390974603" />
     <state x="752" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1623373240159">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
