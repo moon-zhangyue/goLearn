@@ -506,16 +506,40 @@ func main() {
 	//	}
 	//}
 
+	//arr := [][]int{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}
+	//for i := 0; i < 3; i++ {
+	//	for j := 0; j < 3; j++ {
+	//		num := arr[i][j]
+	//		if j > 1 {
+	//			break
+	//		} else {
+	//			continue
+	//		}
+	//		fmt.Println(num)
+	//	}
+	//}
+	//	arr := [][]int{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}
+	//ITERATOR1:
+	//	for i := 0; i < 3; i++ {
+	//		for j := 0; j < 3; j++ {
+	//			num := arr[i][j]
+	//			if j > 1 {
+	//				break ITERATOR1
+	//			}
+	//			fmt.Println(num)
+	//		}
+	//	}
+
 	arr := [][]int{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}
 	for i := 0; i < 3; i++ {
 		for j := 0; j < 3; j++ {
 			num := arr[i][j]
 			if j > 1 {
-				break
-			} else {
-				continue
+				goto EXIT
 			}
 			fmt.Println(num)
 		}
 	}
+EXIT:
+	fmt.Println("Exit.")
 }
