@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"pac"
+)
 
 //func main() {
 //var v1 int      // 整型
@@ -434,112 +436,127 @@ fmt.Printf("The first character of \"%s\" is %c.\n", str, ch)*/
 //fmt.Println(arr)
 //}
 
+//func main() {
+//score := 100
+//if score > 90 {
+//	fmt.Println("Grade: A")
+//} else if score > 80 {
+//	fmt.Println("Grade: B")
+//} else if score > 70 {
+//	fmt.Println("Grade: C")
+//} else if score > 60 {
+//	fmt.Println("Grade: D")
+//} else {
+//	fmt.Println("Grade: F")
+//}
+
+//switch {
+//case score >= 90:
+//	fmt.Println("Grade: A")
+//case score >= 80 && score < 90:
+//	fmt.Println("Grade: B")
+//case score >= 70 && score < 80:
+//	fmt.Println("Grade: C")
+//case score >= 60 && score < 70:
+//	fmt.Println("Grade: D")
+//default:
+//	fmt.Println("Grade: F")
+//}
+
+//sum := 0
+//
+//for i := 1; i <= 100; i++ {
+//	sum += i
+//}
+//
+//fmt.Println(sum)
+//sum := 0
+//i := 0
+//for {
+//	i++
+//	if i > 100 {
+//		break
+//	}
+//	sum += i
+//}
+//fmt.Println(sum)
+
+//a := []int{1, 2, 3, 4, 5, 6}
+//for i, j := 0, len(a)-1; i < j; i, j = i+1, j-1 {
+//	a[i], a[j] = a[j], a[i]
+//}
+//fmt.Println(a)
+
+//JLoop:
+//	for j := 0; j < 5; j++ {
+//		for i := 0; i < 10; i++ {
+//			if i > 5 {
+//				break JLoop
+//			}
+//			fmt.Println(i)
+//		}
+//	}
+
+//arr := [][]int{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}
+//for i := 0; i < 3; i++ {
+//	for j := 0; j < 3; j++ {
+//		num := arr[i][j]
+//		if j > 1 {
+//			break //退出最内层循环
+//		}
+//		fmt.Println(num)
+//	}
+//}
+
+//arr := [][]int{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}
+//for i := 0; i < 3; i++ {
+//	for j := 0; j < 3; j++ {
+//		num := arr[i][j]
+//		if j > 1 {
+//			break
+//		} else {
+//			continue
+//		}
+//		fmt.Println(num)
+//	}
+//}
+//	arr := [][]int{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}
+//ITERATOR1:
+//	for i := 0; i < 3; i++ {
+//		for j := 0; j < 3; j++ {
+//			num := arr[i][j]
+//			if j > 1 {
+//				break ITERATOR1
+//			}
+//			fmt.Println(num)
+//		}
+//	}
+
+//	arr := [][]int{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}
+//	for i := 0; i < 3; i++ {
+//		for j := 0; j < 3; j++ {
+//			num := arr[i][j]
+//			if j > 1 {
+//				goto EXIT
+//			}
+//			fmt.Println(num)
+//		}
+//	}
+//EXIT:
+//	fmt.Println("Exit.")
+//}
+
+//func add(a, b int) int {
+//	return a + b
+//}
+//func main() {
+//	fmt.Println(add(1, 2)) // 3
+//}
+
+//func main() {
+//	fmt.Println(mymath.Add(1, 2)) // 3
+//}
+
 func main() {
-	//score := 100
-	//if score > 90 {
-	//	fmt.Println("Grade: A")
-	//} else if score > 80 {
-	//	fmt.Println("Grade: B")
-	//} else if score > 70 {
-	//	fmt.Println("Grade: C")
-	//} else if score > 60 {
-	//	fmt.Println("Grade: D")
-	//} else {
-	//	fmt.Println("Grade: F")
-	//}
-
-	//switch {
-	//case score >= 90:
-	//	fmt.Println("Grade: A")
-	//case score >= 80 && score < 90:
-	//	fmt.Println("Grade: B")
-	//case score >= 70 && score < 80:
-	//	fmt.Println("Grade: C")
-	//case score >= 60 && score < 70:
-	//	fmt.Println("Grade: D")
-	//default:
-	//	fmt.Println("Grade: F")
-	//}
-
-	//sum := 0
-	//
-	//for i := 1; i <= 100; i++ {
-	//	sum += i
-	//}
-	//
-	//fmt.Println(sum)
-	//sum := 0
-	//i := 0
-	//for {
-	//	i++
-	//	if i > 100 {
-	//		break
-	//	}
-	//	sum += i
-	//}
-	//fmt.Println(sum)
-
-	//a := []int{1, 2, 3, 4, 5, 6}
-	//for i, j := 0, len(a)-1; i < j; i, j = i+1, j-1 {
-	//	a[i], a[j] = a[j], a[i]
-	//}
-	//fmt.Println(a)
-
-	//JLoop:
-	//	for j := 0; j < 5; j++ {
-	//		for i := 0; i < 10; i++ {
-	//			if i > 5 {
-	//				break JLoop
-	//			}
-	//			fmt.Println(i)
-	//		}
-	//	}
-
-	//arr := [][]int{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}
-	//for i := 0; i < 3; i++ {
-	//	for j := 0; j < 3; j++ {
-	//		num := arr[i][j]
-	//		if j > 1 {
-	//			break //退出最内层循环
-	//		}
-	//		fmt.Println(num)
-	//	}
-	//}
-
-	//arr := [][]int{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}
-	//for i := 0; i < 3; i++ {
-	//	for j := 0; j < 3; j++ {
-	//		num := arr[i][j]
-	//		if j > 1 {
-	//			break
-	//		} else {
-	//			continue
-	//		}
-	//		fmt.Println(num)
-	//	}
-	//}
-	//	arr := [][]int{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}
-	//ITERATOR1:
-	//	for i := 0; i < 3; i++ {
-	//		for j := 0; j < 3; j++ {
-	//			num := arr[i][j]
-	//			if j > 1 {
-	//				break ITERATOR1
-	//			}
-	//			fmt.Println(num)
-	//		}
-	//	}
-
-	arr := [][]int{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}
-	for i := 0; i < 3; i++ {
-		for j := 0; j < 3; j++ {
-			num := arr[i][j]
-			if j > 1 {
-				goto EXIT
-			}
-			fmt.Println(num)
-		}
-	}
-EXIT:
-	fmt.Println("Exit.")
+	pac.Printstr("this")
 }

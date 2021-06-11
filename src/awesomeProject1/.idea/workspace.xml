@@ -20,6 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4c3f7ae0-bb4b-40ef-bfda-4acd6f0a3e2f" name="默认更改列表" comment="流程控制">
+      <change afterPath="$PROJECT_DIR$/.idea/awesomeProject1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mymath/mymath.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../awesomeProject2/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../awesomeProject2/.idea/awesomeProject2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../awesomeProject2/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../awesomeProject2/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../awesomeProject2/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../awesomeProject2/hello.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../awesomeProject2/pac/pac.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../awesomeProject2/pac/pac2.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pac/pac.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../pac/pac2.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hello.go" beforeDir="false" afterPath="$PROJECT_DIR$/hello.go" afterDir="false" />
     </list>
@@ -27,6 +39,13 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
   </component>
   <component name="GOROOT" path="C:/Program Files/Go" />
   <component name="Git.Settings">
@@ -36,16 +55,23 @@
     <option name="urls">
       <list>
         <option value="file://$PROJECT_DIR$/../.." />
+        <option value="file://$PROJECT_DIR$" />
+        <option value="file://$PROJECT_DIR$/../pac" />
+        <option value="file://$PROJECT_DIR$/.." />
       </list>
     </option>
   </component>
   <component name="ProjectId" id="1tVsBBTTGgcJygDntSSZkGyHViI" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="添加" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="GO_FMT" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -53,12 +79,13 @@
     <property name="configurable..is.expanded" value="false" />
     <property name="configurable.Global.GOPATH.is.expanded" value="true" />
     <property name="configurable.GoLibrariesConfigurable.is.expanded" value="true" />
-    <property name="configurable.Module.GOPATH.is.expanded" value="false" />
+    <property name="configurable.Module.GOPATH.is.expanded" value="true" />
     <property name="configurable.Project.GOPATH.is.expanded" value="true" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../go-fastdfs" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="com.goide.configuration.GoLibrariesConfigurableProvider" />
   </component>
   <component name="RunManager">
     <configuration name="go build hello.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
@@ -182,7 +209,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623374752701</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="流程控制">
+      <created>1623375476831</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1623375476831</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,6 +235,7 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="refactor(赋值):" />
     <MESSAGE value="refactor(匿名函数):" />
     <MESSAGE value="perf(常量设定):" />
@@ -220,50 +255,54 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="752" y="446" key="#GOROOT/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623137019595" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1623142487847">
+    <state x="657" y="137" key="#go_build_hello.go" timestamp="1623377922868">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623142487847" />
-    <state width="565" height="891" key="GridCell.Tab.0.bottom" timestamp="1623375317484">
+    <state x="657" y="137" key="#go_build_hello.go/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623377922868" />
+    <state x="894" y="262" key="FileChooserDialogImpl" timestamp="1623381826022">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="565" height="891" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623375317484" />
-    <state width="565" height="891" key="GridCell.Tab.0.center" timestamp="1623375317484">
+    <state x="894" y="262" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623381826022" />
+    <state width="565" height="475" key="GridCell.Tab.0.bottom" timestamp="1623390203823">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="565" height="891" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623375317484" />
-    <state width="565" height="891" key="GridCell.Tab.0.left" timestamp="1623375317483">
+    <state width="565" height="475" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623390203823" />
+    <state width="565" height="475" key="GridCell.Tab.0.center" timestamp="1623390203823">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="565" height="891" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623375317483" />
-    <state width="565" height="891" key="GridCell.Tab.0.right" timestamp="1623375317484">
+    <state width="565" height="475" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623390203823" />
+    <state width="565" height="475" key="GridCell.Tab.0.left" timestamp="1623390203823">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="565" height="891" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623375317484" />
-    <state width="1877" height="416" key="GridCell.Tab.1.bottom" timestamp="1623317612542">
+    <state width="565" height="475" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623390203823" />
+    <state width="565" height="475" key="GridCell.Tab.0.right" timestamp="1623390203823">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="416" key="GridCell.Tab.1.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623317612542" />
-    <state width="1877" height="416" key="GridCell.Tab.1.center" timestamp="1623317612542">
+    <state width="565" height="475" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623390203823" />
+    <state width="1877" height="416" key="GridCell.Tab.1.bottom" timestamp="1623382235198">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="416" key="GridCell.Tab.1.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623317612542" />
-    <state width="1877" height="416" key="GridCell.Tab.1.left" timestamp="1623317612542">
+    <state width="1877" height="416" key="GridCell.Tab.1.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623382235198" />
+    <state width="1877" height="416" key="GridCell.Tab.1.center" timestamp="1623382235198">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="416" key="GridCell.Tab.1.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623317612542" />
-    <state width="1877" height="416" key="GridCell.Tab.1.right" timestamp="1623317612542">
+    <state width="1877" height="416" key="GridCell.Tab.1.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623382235198" />
+    <state width="1877" height="416" key="GridCell.Tab.1.left" timestamp="1623382235198">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="416" key="GridCell.Tab.1.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623317612542" />
-    <state x="461" y="164" key="SettingsEditor" timestamp="1623144567611">
+    <state width="1877" height="416" key="GridCell.Tab.1.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623382235198" />
+    <state width="1877" height="416" key="GridCell.Tab.1.right" timestamp="1623382235198">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="164" key="SettingsEditor/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623144567611" />
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1623374878226">
+    <state width="1877" height="416" key="GridCell.Tab.1.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623382235198" />
+    <state x="241" y="151" key="SettingsEditor" timestamp="1623382205342">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="249" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623374878226" />
+    <state x="241" y="151" key="SettingsEditor/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623382205342" />
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2" timestamp="1623375547817">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="249" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1623375547817" />
     <state x="752" y="430" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1623373240159">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
