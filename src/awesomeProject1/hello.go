@@ -485,13 +485,37 @@ func main() {
 	//}
 	//fmt.Println(a)
 
-JLoop:
-	for j := 0; j < 5; j++ {
-		for i := 0; i < 10; i++ {
-			if i > 5 {
-				break JLoop
+	//JLoop:
+	//	for j := 0; j < 5; j++ {
+	//		for i := 0; i < 10; i++ {
+	//			if i > 5 {
+	//				break JLoop
+	//			}
+	//			fmt.Println(i)
+	//		}
+	//	}
+
+	//arr := [][]int{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}
+	//for i := 0; i < 3; i++ {
+	//	for j := 0; j < 3; j++ {
+	//		num := arr[i][j]
+	//		if j > 1 {
+	//			break //退出最内层循环
+	//		}
+	//		fmt.Println(num)
+	//	}
+	//}
+
+	arr := [][]int{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}
+	for i := 0; i < 3; i++ {
+		for j := 0; j < 3; j++ {
+			num := arr[i][j]
+			if j > 1 {
+				break
+			} else {
+				continue
 			}
-			fmt.Println(i)
+			fmt.Println(num)
 		}
 	}
 }
