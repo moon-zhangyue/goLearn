@@ -1,5 +1,3 @@
-module "awesomeProject2"
+module awesomeProject2
 
-require (
-
-)
+go 1.13
