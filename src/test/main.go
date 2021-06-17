@@ -199,7 +199,7 @@ func main() {
 	decorator1 := execTime(multiply1)
 	c := decorator1(a, b)
 	fmt.Printf("%d x %d = %d\n", a, b, c)
-	fmt.Println("位运算：")
+	fmt.Println("位运算：") //左移是乘以2的N次幂 右移是除以
 	decorator2 := execTime(multiply2)
 	a = 1
 	b = 4
