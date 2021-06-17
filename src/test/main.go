@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"time"
+	"strconv"
 )
 
 //func add(a, b int) int {
@@ -224,31 +224,31 @@ import (
 //	fmt.Printf("The %dth number of fibonacci sequence is %d\n", n, num)
 //}
 
-type FibonacciFunc func(int) int
+//type FibonacciFunc func(int) int
 
 //通过递归函数实现斐波那契数列
-func fibonacci(n int) int {
-	// 终止条件
-	if n == 1 {
-		return 0
-	}
-	if n == 2 {
-		return 1
-	}
-	// 递归公式
-	return fibonacci(n-1) + fibonacci(n-2)
-}
+//func fibonacci(n int) int {
+//	// 终止条件
+//	if n == 1 {
+//		return 0
+//	}
+//	if n == 2 {
+//		return 1
+//	}
+//	// 递归公式
+//	return fibonacci(n-1) + fibonacci(n-2)
+//}
 
 //// 斐波那契函数执行耗时计算
-func fibonacciExecTime(f FibonacciFunc) FibonacciFunc {
-	return func(n int) int {
-		start := time.Now()      // 起始时间
-		num := f(n)              // 执行斐波那契函数
-		end := time.Since(start) // 函数执行完毕耗时
-		fmt.Printf("--- 执行耗时: %v ---\n", end)
-		return num // 返回计算结果
-	}
-}
+//func fibonacciExecTime(f FibonacciFunc) FibonacciFunc {
+//	return func(n int) int {
+//		start := time.Now()      // 起始时间
+//		num := f(n)              // 执行斐波那契函数
+//		end := time.Since(start) // 函数执行完毕耗时
+//		fmt.Printf("--- 执行耗时: %v ---\n", end)
+//		return num // 返回计算结果
+//	}
+//}
 
 //func main() {
 //	n1 := 5
@@ -260,39 +260,114 @@ func fibonacciExecTime(f FibonacciFunc) FibonacciFunc {
 //	fmt.Printf("The %dth number of fibonacci sequence is %d\n", n2, r2)
 //}
 
-const MAX = 50
+//const MAX = 50
+//
+//var fibs [MAX]int
+//
+//// 缓存中间结果的递归函数优化版
+//func fibonacci2(n int) int {
+//	if n == 1 {
+//		return 0
+//	}
+//	if n == 2 {
+//		return 1
+//	}
+//	index := n - 1
+//	if fibs[index] != 0 {
+//		return fibs[index]
+//	}
+//	num := fibonacci2(n-1) + fibonacci2(n-2)
+//	fibs[index] = num
+//
+//	fmt.Println(fibs)
+//
+//	return num
+//}
+//
+//func main() {
+//	n1 := 5
+//	f1 := fibonacciExecTime(fibonacci)
+//	r1 := f1(n1)
+//	fmt.Printf("The %dth number of fibonacci sequence is %d\n", n1, r1)
+//	n2 := 50
+//	r2 := f1(n2)
+//	fmt.Printf("The %dth number of fibonacci sequence is %d\n", n2, r2)
+//	f2 := fibonacciExecTime(fibonacci2)
+//	r3 := f2(n2)
+//	fmt.Printf("The %dth number of fibonacci sequence is %d\n", n2, r3)
+//}
 
-var fibs [MAX]int
+//func ageSum(users []map[string]string) int {
+//	var sum int
+//	for _, user := range users {
+//		num, _ := strconv.Atoi(user["age"]) //字符串转int
+//		sum += num
+//	}
+//	return sum
+//}
+//func main() {
+//	var users = []map[string]string{
+//		{
+//			"name": "张三",
+//			"age":  "18",
+//		},
+//		{
+//			"name": "李四",
+//			"age":  "22",
+//		},
+//		{
+//			"name": "王五",
+//			"age":  "20",
+//		},
+//	}
+//	fmt.Printf("用户年龄累加结果: %d\n", ageSum(users))
+//}
 
-// 缓存中间结果的递归函数优化版
-func fibonacci2(n int) int {
-	if n == 1 {
-		return 0
+func mapToString(items []map[string]string, f func(map[string]string) string) []string {
+	newSlice := make([]string, len(items))
+
+	fmt.Println(items)
+	for _, item := range items {
+		newSlice = append(newSlice, f(item))
+		fmt.Println(newSlice)
 	}
-	if n == 2 {
-		return 1
-	}
-	index := n - 1
-	if fibs[index] != 0 {
-		return fibs[index]
-	}
-	num := fibonacci2(n-1) + fibonacci2(n-2)
-	fibs[index] = num
 
-	fmt.Println(fibs)
+	return newSlice
+}
 
-	return num
+//再编写 Reduce 求和函数：
+func fieldSum(items []string, f func(string) int) int {
+	var sum int
+	fmt.Println(items)
+	for _, item := range items {
+		sum += f(item)
+	}
+	return sum
 }
 
 func main() {
-	n1 := 5
-	f1 := fibonacciExecTime(fibonacci)
-	r1 := f1(n1)
-	fmt.Printf("The %dth number of fibonacci sequence is %d\n", n1, r1)
-	n2 := 50
-	r2 := f1(n2)
-	fmt.Printf("The %dth number of fibonacci sequence is %d\n", n2, r2)
-	f2 := fibonacciExecTime(fibonacci2)
-	r3 := f2(n2)
-	fmt.Printf("The %dth number of fibonacci sequence is %d\n", n2, r3)
+	var users = []map[string]string{
+		{
+			"name": "张三",
+			"age":  "18",
+		},
+		{
+			"name": "李四",
+			"age":  "22",
+		},
+		{
+			"name": "王五",
+			"age":  "20",
+		},
+	}
+
+	ageSlice := mapToString(users, func(user map[string]string) string {
+		return user["age"]
+	})
+	sum := fieldSum(ageSlice, func(age string) int {
+		intAge, _ := strconv.Atoi(age)
+		return intAge
+	})
+
+	fmt.Printf("用户年龄累加结果: %d\n", sum)
 }
