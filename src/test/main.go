@@ -279,9 +279,19 @@ func fibonacci2(n int) int {
 	num := fibonacci2(n-1) + fibonacci2(n-2)
 	fibs[index] = num
 
-	fmt.Println(fibs)
+	//fmt.Println(fibs)
 
 	return num
+}
+
+func fibonacciTail(n, first, second int) int {
+	if n < 2 {
+		return first
+	}
+	return fibonacciTail(n-1, second, first+second)
+}
+func fibonacci3(n int) int {
+	return fibonacciTail(n, 0, 1) // F(1) = 0, F(2) = 1
 }
 
 func main() {
@@ -295,4 +305,7 @@ func main() {
 	f2 := fibonacciExecTime(fibonacci2)
 	r3 := f2(n2)
 	fmt.Printf("The %dth number of fibonacci sequence is %d\n", n2, r3)
+	f3 := fibonacciExecTime(fibonacci3)
+	r4 := f3(n2)
+	fmt.Printf("The %dth number of fibonacci sequence is %d\n", n2, r4)
 }
