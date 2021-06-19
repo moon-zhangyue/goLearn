@@ -26,7 +26,7 @@ import "fmt"
 //	fmt.Println(x.Equal(y))
 //	fmt.Println(x.Add(y))
 //}
-type Student struct {
+/*type Student struct {
 	id    uint
 	name  string
 	male  bool
@@ -55,7 +55,7 @@ func (s *Student) SetName(name string) {
 		s.id, s.name, s.male, s.score)
 }*/
 
-func (s *Student) String() string {
+/*func (s *Student) String() string {
 	return "My name is :" + s.name
 }
 
@@ -74,4 +74,45 @@ func main() {
 	student := NewStudent(1, "aaaa", 100)
 	fmt.Println(s)
 	fmt.Println(student)
+}*/
+
+//类的继承
+type Animal struct {
+	Name string
+}
+
+func (a Animal) Call() string {
+	return "动物的叫声..."
+}
+func (a Animal) FavorFood() string {
+	return "爱吃的食物..."
+}
+func (a Animal) GetName() string {
+	return a.Name
+}
+
+type Dog struct {
+	Animal
+}
+
+func (d Dog) FavorFood() string {
+	return "骨头"
+}
+
+func (d Dog) Call() string {
+	return "汪汪汪"
+}
+
+func main() {
+	animal := Animal{"中华田园犬"}
+	dog := Dog{animal}
+	fmt.Println(dog.GetName())
+	fmt.Println(dog.Call())
+	fmt.Println(dog.FavorFood())
+
+	//调用父类
+	fmt.Print(dog.Animal.Call())
+	fmt.Println(dog.Call())
+	fmt.Print(dog.Animal.FavorFood())
+	fmt.Println(dog.FavorFood())
 }
