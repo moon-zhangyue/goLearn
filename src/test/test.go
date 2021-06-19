@@ -46,10 +46,32 @@ func (s Student) GetName() string {
 	return s.name
 }
 
+func (s *Student) SetName(name string) {
+	s.name = name
+}
+
+/*func (s Student) String() string {
+	return fmt.Sprintf("{id: %d, name: %s, male: %t, score: %f}",
+		s.id, s.name, s.male, s.score)
+}*/
+
+func (s *Student) String() string {
+	return "My name is :" + s.name
+}
+
 func main() {
 	//student := NewStudent(1, "嘟嘟胖胖", true, 10.0)
 	//fmt.Println(student)
 
-	student := NewStudent(1, "学院君", 100)
-	fmt.Println("Name:", student.GetName())
+	//student := NewStudent(1, "aaaa", 100)
+	//fmt.Println("Name:", student.GetName())
+	//fmt.Println(student)
+	//student.SetName("bbbb")
+	//fmt.Println("Name:", student.GetName())
+
+	var s Student
+	s.name = "haha"
+	student := NewStudent(1, "aaaa", 100)
+	fmt.Println(s)
+	fmt.Println(student)
 }
