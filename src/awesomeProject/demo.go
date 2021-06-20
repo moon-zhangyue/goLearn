@@ -1,6 +1,9 @@
 //demo测试
 package main // 声明 main 包
-import "fmt"
+import (
+	. "awesomeProject/animal"
+	"fmt"
+)
 
 //func main() { // 声明 main 主函数
 //fmt.Println("Hello World!") // 打印 Hello World!
@@ -1997,49 +2000,60 @@ func main() {
 //Go语言函数类型实现接口——把函数作为接口来调用
 
 // 调用器接口
-type Invoker interface {
-	// 需要实现一个Call方法
-	Call(interface{})
-}
-
-// 结构体类型
-type Struct struct {
-}
-
-// 实现Invoker的Call
-func (s *Struct) Call(p interface{}) {
-	fmt.Println("from struct", p)
-}
-
-// 函数定义为类型
-type FuncCaller func(interface{})
-
-// 实现Invoker的Call
-func (f FuncCaller) Call(p interface{}) {
-
-	// 调用f函数本体
-	f(p)
-}
+//type Invoker interface {
+//	// 需要实现一个Call方法
+//	Call(interface{})
+//}
+//
+//// 结构体类型
+//type Struct struct {
+//}
+//
+//// 实现Invoker的Call
+//func (s *Struct) Call(p interface{}) {
+//	fmt.Println("from struct", p)
+//}
+//
+//// 函数定义为类型
+//type FuncCaller func(interface{})
+//
+//// 实现Invoker的Call
+//func (f FuncCaller) Call(p interface{}) {
+//
+//	// 调用f函数本体
+//	f(p)
+//}
+//
+//func main() {
+//
+//	// 声明接口变量
+//	var invoker Invoker
+//
+//	// 实例化结构体
+//	s := new(Struct)
+//
+//	// 将实例化的结构体赋值到接口
+//	invoker = s
+//
+//	// 使用接口调用实例化结构体的方法Struct.Call
+//	invoker.Call("hello")
+//
+//	// 将匿名函数转为FuncCaller类型，再赋值给接口
+//	invoker = FuncCaller(func(v interface{}) {
+//		fmt.Println("from function", v)
+//	})
+//
+//	// 使用接口调用FuncCaller.Call，内部会调用函数本体
+//	invoker.Call("hello")
+//}
 
 func main() {
-
-	// 声明接口变量
-	var invoker Invoker
-
-	// 实例化结构体
-	s := new(Struct)
-
-	// 将实例化的结构体赋值到接口
-	invoker = s
-
-	// 使用接口调用实例化结构体的方法Struct.Call
-	invoker.Call("hello")
-
-	// 将匿名函数转为FuncCaller类型，再赋值给接口
-	invoker = FuncCaller(func(v interface{}) {
-		fmt.Println("from function", v)
-	})
-
-	// 使用接口调用FuncCaller.Call，内部会调用函数本体
-	invoker.Call("hello")
+	animal := Animal{Name: "中华田园犬"}
+	pet := Pet{Name: "宠物狗"}
+	dog := Dog{Animal: &animal, Pet: pet}
+	fmt.Println(dog.Animal.GetName())
+	fmt.Print(dog.Animal.Call())
+	fmt.Println(dog.Call())
+	fmt.Print(dog.Animal.FavorFood())
+	fmt.Println(dog.FavorFood())
 }
