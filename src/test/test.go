@@ -81,6 +81,7 @@ type Animal struct {
 	Name string
 }
 
+//Animal的属性
 func (a Animal) Call() string {
 	return "动物的叫声..."
 }
@@ -91,8 +92,18 @@ func (a Animal) GetName() string {
 	return a.Name
 }
 
+//type Dog struct {
+//	Animal
+//}
+
+type Pet struct {
+	Name string
+}
+
+//起别名
 type Dog struct {
-	Animal
+	animal *Animal
+	pet    Pet
 }
 
 func (d Dog) FavorFood() string {
@@ -104,15 +115,25 @@ func (d Dog) Call() string {
 }
 
 func main() {
-	animal := Animal{"中华田园犬"}
-	dog := Dog{animal}
-	fmt.Println(dog.GetName())
-	fmt.Println(dog.Call())
-	fmt.Println(dog.FavorFood())
+	//animal := Animal{"中华田园犬"}
+	//dog := Dog{animal}
+	//fmt.Println(dog.GetName())
+	//fmt.Println(dog.Call())
+	//fmt.Println(dog.FavorFood())
+	//
+	////调用父类
+	//fmt.Print(dog.Animal.Call())
+	//fmt.Println(dog.Call())
+	//fmt.Print(dog.Animal.FavorFood())
+	//fmt.Println(dog.FavorFood())
 
-	//调用父类
-	fmt.Print(dog.Animal.Call())
+	animal := Animal{"中华田园犬"}
+	pet := Pet{"宠物狗"}
+	dog := Dog{&animal, pet}
+	// 通过 animal 引用 Animal 类型实例
+	fmt.Println(dog.animal.GetName())
+	fmt.Print(dog.animal.Call())
 	fmt.Println(dog.Call())
-	fmt.Print(dog.Animal.FavorFood())
+	fmt.Print(dog.animal.FavorFood())
 	fmt.Println(dog.FavorFood())
 }
