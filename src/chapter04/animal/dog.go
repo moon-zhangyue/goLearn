@@ -17,6 +17,3 @@ func (d Dog) Call() string {
 func (d Dog) GetName() string {
 	return d.pet.GetName()
 }
-func (d Dog) GetName() string {
-	return d.pet.GetName()
-}
