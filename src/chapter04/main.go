@@ -67,23 +67,64 @@ import "fmt"
 //}
 
 //指针传递
-type Integer int
+//type Integer int
+//
+//func (a *Integer) Add(b Integer) {
+//	*a = (*a) + b
+//}
+//func (a Integer) Multiply(b Integer) Integer {
+//	return a * b
+//}
+//
+//type Math interface {
+//	Add(i Integer)
+//	Multiply(i Integer) Integer
+//}
+//
+//func main() {
+//	var a Integer = 1
+//	var m Math = &a
+//	m.Add(2)
+//	fmt.Printf("1 + 2 = %d\n", a)
+//}
 
-func (a *Integer) Add(b Integer) {
-	*a = (*a) + b
-}
-func (a Integer) Multiply(b Integer) Integer {
-	return a * b
+type Number1 interface {
+	Equal(i int) bool
+	LessThan(i int) bool
+	MoreThan(i int) bool
 }
 
-type Math interface {
-	Add(i Integer)
-	Multiply(i Integer) Integer
+type Number2 interface {
+	Equal(i int) bool
+	MoreThan(i int) bool
+	LessThan(i int) bool
+	Add(i int)
 }
+
+type Number int
+
+func (n Number) Equal(i int) bool {
+	return int(n) == i
+}
+
+func (n Number) LessThan(i int) bool {
+	return int(n) < i
+}
+
+func (n Number) MoreThan(i int) bool {
+	return int(n) > i
+}
+
+func (n *Number) Add(i int) {
+	*n = *n + Number(i)
+}
+
+var num1 Number = 1
+var num2 Number2 = &num1
+var num3 Number1 = num2
 
 func main() {
-	var a Integer = 1
-	var m Math = &a
-	m.Add(2)
-	fmt.Printf("1 + 2 = %d\n", a)
+	fmt.Println(num1)
+	fmt.Println(num2)
+	fmt.Println(num3)
 }
