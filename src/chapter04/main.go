@@ -124,6 +124,12 @@ var num2 Number2 = &num1
 var num3 Number1 = num2
 
 func main() {
+	var num1 Number = 1
+	var num2 Number2 = &num1
+	if num3, ok := num2.(Number1); ok {
+		fmt.Println(num3.Equal(1))
+	}
+
 	fmt.Println(num1)
 	fmt.Println(num2)
 	fmt.Println(num3)
