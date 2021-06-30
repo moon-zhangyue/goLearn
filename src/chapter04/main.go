@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"reflect"
+)
 
 //func main() {
 //	//animal := Animal{Name: "中华田园犬"}
@@ -88,7 +91,7 @@ import "fmt"
 //	fmt.Printf("1 + 2 = %d\n", a)
 //}
 
-type Number1 interface {
+/*type Number1 interface {
 	Equal(i int) bool
 	LessThan(i int) bool
 	MoreThan(i int) bool
@@ -133,4 +136,16 @@ func main() {
 	fmt.Println(num1)
 	fmt.Println(num2)
 	fmt.Println(num3)
+}*/
+
+func main() {
+	var animal = NewAnimal("中华田园犬")
+	var pet = NewPet("泰迪")
+	var any interface{} = NewDog(&animal, pet)
+	if dog, ok := any.(Dog); ok {
+		fmt.Println(dog.GetName())
+		fmt.Println(dog.Call())
+		fmt.Println(dog.FavorFood())
+		fmt.Println(reflect.TypeOf(dog))
+	}
 }
