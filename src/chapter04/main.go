@@ -1,6 +1,7 @@
 package main
 
 import (
+	. "chapter04/animal"
 	"fmt"
 	"reflect"
 )
@@ -139,13 +140,20 @@ func main() {
 }*/
 
 func main() {
-	var animal = NewAnimal("中华田园犬")
-	var pet = NewPet("泰迪")
-	var any interface{} = NewDog(&animal, pet)
-	if dog, ok := any.(Dog); ok {
-		fmt.Println(dog.GetName())
-		fmt.Println(dog.Call())
-		fmt.Println(dog.FavorFood())
-		fmt.Println(reflect.TypeOf(dog))
-	}
+	animal := NewAnimal("中华田园犬")
+	pet := NewPet("泰迪")
+	dog := NewDog(&animal, pet)
+	// 返回的是 reflect.Type 类型值
+	dogType := reflect.TypeOf(dog)
+	fmt.Println("dog type:", dogType)
+
+	//var animal = NewAnimal("中华田园犬")
+	//var pet = NewPet("泰迪")
+	//var any interface{} = NewDog(&animal, pet)
+	//if dog, ok := any.(Dog); ok {
+	//	fmt.Println(dog.GetName())
+	//	fmt.Println(dog.Call())
+	//	fmt.Println(dog.FavorFood())
+	//	fmt.Println(reflect.TypeOf(dog))
+	//}
 }
