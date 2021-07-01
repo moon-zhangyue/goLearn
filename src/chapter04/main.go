@@ -1,11 +1,5 @@
 package main
 
-import (
-	. "chapter04/animal"
-	"fmt"
-	"reflect"
-)
-
 //func main() {
 //	//animal := Animal{Name: "中华田园犬"}
 //	//pet := Pet{Name: "宠物狗"}
@@ -139,48 +133,48 @@ func main() {
 	fmt.Println(num3)
 }*/
 
-func main() {
-	//var animal = NewAnimal("中华田园犬")
-	//var pet = NewPet("泰迪")
-	//var any interface{} = NewDog(&animal, pet)
-	//if dog, ok := any.(Dog); ok {
-	//	fmt.Println(dog.GetName())
-	//	fmt.Println(dog.Call())
-	//	fmt.Println(dog.FavorFood())
-	//	fmt.Println(reflect.TypeOf(dog))
-	//}
-
-	animal := NewAnimal("中华田园犬")
-	pet := NewPet("泰迪")
-	dog := NewDog(&animal, pet)
-	// 返回的是 reflect.Type 类型值
-	//dogType := reflect.TypeOf(dog)
-	//fmt.Println("dog type:", dogType)
-
-	// 返回的是 dog 指针对应的 reflect.Value 类型值
-	dogValue := reflect.ValueOf(&dog).Elem()
-	fmt.Println(dogValue)
-	//dogValue1 := reflect.ValueOf(dog)
-	//fmt.Println(dogValue1)
-
-	// 获取 dogValue 的所有属性
-	fmt.Println("================ Props ================")
-	for i := 0; i < dogValue.NumField(); i++ {
-		// 获取属性名
-		fmt.Println("name:", dogValue.Type().Field(i).Name)
-		// 获取属性类型
-		fmt.Println("type:", dogValue.Type().Field(i).Type)
-		// 获取属性值
-		fmt.Println("value:", dogValue.Field(i))
-	}
-	// 获取 dogValue 的所有方法
-	fmt.Println("================ Methods ================")
-	for j := 0; j < dogValue.NumMethod(); j++ {
-		// 获取方法名
-		fmt.Println("name:", dogValue.Type().Method(j).Name)
-		// 获取方法类型
-		fmt.Println("type:", dogValue.Type().Method(j).Type)
-		// 调用该方法
-		fmt.Println("exec result:", dogValue.Method(j).Call([]reflect.Value{}))
-	}
-}
+//func main() {
+//	//var animal = NewAnimal("中华田园犬")
+//	//var pet = NewPet("泰迪")
+//	//var any interface{} = NewDog(&animal, pet)
+//	//if dog, ok := any.(Dog); ok {
+//	//	fmt.Println(dog.GetName())
+//	//	fmt.Println(dog.Call())
+//	//	fmt.Println(dog.FavorFood())
+//	//	fmt.Println(reflect.TypeOf(dog))
+//	//}
+//
+//	animal := NewAnimal("中华田园犬")
+//	pet := NewPet("泰迪")
+//	dog := NewDog(&animal, pet)
+//	// 返回的是 reflect.Type 类型值
+//	//dogType := reflect.TypeOf(dog)
+//	//fmt.Println("dog type:", dogType)
+//
+//	// 返回的是 dog 指针对应的 reflect.Value 类型值
+//	dogValue := reflect.ValueOf(&dog).Elem()
+//	fmt.Println(dogValue)
+//	//dogValue1 := reflect.ValueOf(dog)
+//	//fmt.Println(dogValue1)
+//
+//	// 获取 dogValue 的所有属性
+//	fmt.Println("================ Props ================")
+//	for i := 0; i < dogValue.NumField(); i++ {
+//		// 获取属性名
+//		fmt.Println("name:", dogValue.Type().Field(i).Name)
+//		// 获取属性类型
+//		fmt.Println("type:", dogValue.Type().Field(i).Type)
+//		// 获取属性值
+//		fmt.Println("value:", dogValue.Field(i))
+//	}
+//	// 获取 dogValue 的所有方法
+//	fmt.Println("================ Methods ================")
+//	for j := 0; j < dogValue.NumMethod(); j++ {
+//		// 获取方法名
+//		fmt.Println("name:", dogValue.Type().Method(j).Name)
+//		// 获取方法类型
+//		fmt.Println("type:", dogValue.Type().Method(j).Type)
+//		// 调用该方法
+//		fmt.Println("exec result:", dogValue.Method(j).Call([]reflect.Value{}))
+//	}
+//}
