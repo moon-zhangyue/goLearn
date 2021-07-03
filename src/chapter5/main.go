@@ -59,6 +59,7 @@ func main() {
 		switch err.(type) {
 		case *os.PathError:
 			// do something
+			fmt.Println("文件不存在")
 		case *os.LinkError:
 			// dome something
 		case *os.SyscallError:
