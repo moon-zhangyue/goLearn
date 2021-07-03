@@ -4,8 +4,7 @@ import (
 	"errors"
 	"fmt"
 	"os"
-	"path/filepath"
-	"strconv"
+	"os/exec"
 )
 
 type error interface {
@@ -15,6 +14,17 @@ type error interface {
 func Foo(param int) (n int, err error) {
 	// ...
 	return n, err
+}
+
+func add(a, b int) (c int, err error) {
+	if a < 0 || b < 0 {
+		err = errors.New("只支持非负整数相加")
+		return
+	}
+	a *= 2
+	b *= 3
+	c = a + b
+	return
 }
 
 func main() {
@@ -27,7 +37,7 @@ func main() {
 	//	fmt.Println(n)
 	//}
 
-	if len(os.Args) != 3 {
+	/*if len(os.Args) != 3 {
 		fmt.Printf("Usage: %s num1 num2\n", filepath.Base(os.Args[0]))
 		return
 	}
@@ -40,16 +50,34 @@ func main() {
 		fmt.Println(err)
 	} else {
 		fmt.Printf("add(%d, %d) = %d\n", x, y, z)
+	}*/
+
+	// 获取指定路径文件信息，对应类型是 FileInfo
+	// 如果文件不存在，则返回 PathError 类型错误
+	fi, err := os.Stat("test.txt")
+	if err != nil {
+		switch err.(type) {
+		case *os.PathError:
+			// do something
+		case *os.LinkError:
+			// dome something
+		case *os.SyscallError:
+			// dome something
+		case *exec.Error:
+			// dome something
+		}
+	} else {
+		// ...
+		fmt.Println(fi)
 	}
 }
 
-func add(a, b int) (c int, err error) {
-	if a < 0 || b < 0 {
-		err = errors.New("只支持非负整数相加")
-		return
-	}
-	a *= 2
-	b *= 3
-	c = a + b
-	return
+type PathError struct {
+	Op   string
+	Path string
+	Err  error
+}
+
+func (e *PathError) Error() string {
+	return e.Op + " " + e.Path + ": " + e.Err.Error()
 }
