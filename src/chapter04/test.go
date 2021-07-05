@@ -49,26 +49,27 @@ func (c *Container) Get(val interface{}) error {
 	c.s = c.s.Slice(1, c.s.Len())
 	return nil
 }
-func main() {
-	nums := []int{1, 2, 3, 4, 5}
-	// 初始化容器，元素类型和 nums 中的元素类型相同
-	c := NewContainer(reflect.TypeOf(nums[0]), 16)
-	// 添加元素到容器
-	for _, n := range nums {
-		if err := c.Put(n); err != nil {
-			panic(err)
-		}
-	}
-	// 从容器读取元素，将返回结果初始化为 0
-	num := 0
-	if err := c.Get(&num); err != nil {
-		panic(err)
-	}
 
-	if err := c.Get(num); err != nil {
-		panic(err)
-	}
-
-	// 打印返回结果值
-	fmt.Printf("%v (%T)\n", num, num)
-}
+//func main() {
+//	nums := []int{1, 2, 3, 4, 5}
+//	// 初始化容器，元素类型和 nums 中的元素类型相同
+//	c := NewContainer(reflect.TypeOf(nums[0]), 16)
+//	// 添加元素到容器
+//	for _, n := range nums {
+//		if err := c.Put(n); err != nil {
+//			panic(err)
+//		}
+//	}
+//	// 从容器读取元素，将返回结果初始化为 0
+//	num := 0
+//	if err := c.Get(&num); err != nil {
+//		panic(err)
+//	}
+//
+//	if err := c.Get(num); err != nil {
+//		panic(err)
+//	}
+//
+//	// 打印返回结果值
+//	fmt.Printf("%v (%T)\n", num, num)
+//}
