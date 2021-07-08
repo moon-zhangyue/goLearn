@@ -58,7 +58,7 @@ func traverse(t *Node) {
 		fmt.Printf("%d -> ", t.Value)
 		t = t.Next
 	}
-	fmt.Println()
+	fmt.Println() //空行
 }
 func main() {
 	stack = nil
