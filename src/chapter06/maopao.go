@@ -16,9 +16,9 @@ func bubbleSort(nums []int) []int {
 				nums[j], nums[j+1] = nums[j+1], nums[j]
 				flag = true
 			}
-			if !flag {
-				break
-			}
+		}
+		if !flag {
+			break
 		}
 	}
 
