@@ -74,18 +74,6 @@ func main() {
 	}
 	// 从 Trie 树中查找字符串
 	term := "哼哼哈哈"
-
-	// Trie 树节点
-	type trieNode struct {
-		char     string             // Unicode 字符
-		isEnding bool               // 是否是单词结尾
-		children map[rune]*trieNode // 该节点的子节点字典
-	}
-
-	// Trie 树结构
-	type Trie struct {
-		root *trieNode // 根节点指针
-	}
 	if trie.Find(term) {
 		fmt.Printf("包含单词\"%s\"\n", term)
 	} else {
