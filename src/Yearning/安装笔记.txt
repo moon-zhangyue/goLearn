@@ -1,0 +1,26 @@
+Go构建项目的时候，解决missing go.sum entry for module providing package ＜package_name＞  或者其他的错误 
+
+解决方案一：
+
+当在代码中使用了第三方库 ，但是go.mod中并没有跟着更新的时候
+
+如果直接run或者build就会报这个错误
+
+missing go.sum entry for module providing package <package_name>
+
+可以使用go mod tidy 来整理依赖
+
+这个命令会：
+
+删除不需要的依赖包
+
+下载新的依赖包
+
+更新go.sum
+ 
+
+解决方案二：
+
+go build -mod=mod
+ 
+使用第二种就可以
