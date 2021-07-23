@@ -59,6 +59,16 @@ func test(ch chan<- int) {
 	close(ch)
 }
 
+//单项只读通道
+func test1() <-chan int {
+	ch := make(chan int, 20)
+	for i := 0; i < 100; i++ {
+		ch <- i
+	}
+	close(ch)
+	return ch
+}
+
 func main() {
 	start := time.Now()
 	ch := make(chan int, 20)
