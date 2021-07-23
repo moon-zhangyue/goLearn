@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"time"
+	"math/rand"
 )
 
 //func add(a, b int, ch chan int) {
@@ -60,30 +60,30 @@ import (
 //}
 //
 //单项只读通道
-func test1() <-chan int {
-	ch := make(chan int, 20)
-	for i := 0; i < 100; i++ {
-		ch <- i
-	}
-	close(ch)
-	return ch
-}
-
-func main() {
-	start := time.Now()
-	//ch := make(chan int, 20)
-	//go test(ch)
-	ch1 := <-test1()
-
-	//for i := range ch {
-	//	fmt.Println("接收到的数据:", i)
-	//}
-	end := time.Now()
-	consume := end.Sub(start).Seconds()
-	fmt.Println("程序执行耗时(s)：", consume)
-
-	fmt.Printf("ch值为%#v \n", ch1)
-}
+//func test1() <-chan int {
+//	ch := make(chan int, 20)
+//	for i := 0; i < 10; i++ {
+//		ch <- i
+//	}
+//	close(ch)
+//	return ch
+//}
+//
+//func main() {
+//	start := time.Now()
+//	//ch := make(chan int, 20)
+//	//go test(ch)
+//	ch1 := <-test1()
+//
+//	//for i := range ch {
+//	//	fmt.Println("接收到的数据:", i)
+//	//}
+//	end := time.Now()
+//	consume := end.Sub(start).Seconds()
+//	fmt.Println("程序执行耗时(s)：", consume)
+//
+//	fmt.Printf("ch值为%#v \n", ch1)
+//}
 
 // 单向通道：一般只在参数中限制通道方向是取值还是输入
 // 现在返回值第二个只写，这会导致运用这个函数的时候，能获取到channel的内存地址，但是获取不到其中存着的值
@@ -169,3 +169,72 @@ func main() {
 // 函数的两个返回通道如下
 // 第一个：(<-chan int)(0xc00001a150)【只读，存有的值为11】
 // 第二个：(chan<- int)(0xc00001a1c0)【只写，取不到】
+
+//select
+//func main() {
+//	chs := [3]chan int{
+//		make(chan int, 1),
+//		make(chan int, 1),
+//		make(chan int, 1),
+//	}
+//
+//	rand.Seed(time.Now().Unix())
+//	index := rand.Intn(3) // 随机生成0-2之间的数字
+//	fmt.Printf("随机索引/数值: %d\n", index)
+//	chs[index] <- index // 向通道发送随机数字
+//
+//	// 哪一个通道中有值，哪个对应的分支就会被执行
+//	select {
+//	case <-chs[0]:
+//		fmt.Println("第一个条件分支被选中")
+//	case <-chs[1]:
+//		fmt.Println("第二个条件分支被选中")
+//	case num := <-chs[2]:
+//		fmt.Println("第三个条件分支被选中:", num)
+//	default:
+//		fmt.Println("没有分支被选中")
+//	}
+//}
+
+func main() {
+	chs := [3]chan int{
+		make(chan int, 3),
+		make(chan int, 3),
+		make(chan int, 3),
+	}
+
+	index1 := rand.Intn(3) // 随机生成0-2之间的数字
+	fmt.Printf("随机索引/数值: %d\n", index1)
+	chs[index1] <- rand.Int() // 向通道发送随机数字
+
+	index2 := rand.Intn(3)
+	fmt.Printf("随机索引/数值: %d\n", index2)
+	chs[index2] <- rand.Int()
+
+	index3 := rand.Intn(3)
+	fmt.Printf("随机索引/数值: %d\n", index3)
+	chs[index3] <- rand.Int()
+
+	// 哪一个通道中有值，哪个对应的分支就会被执行
+	for i := 0; i < 3; i++ {
+		select {
+		case num, ok := <-chs[0]:
+			if !ok {
+				break
+			}
+			fmt.Println("第一个条件分支被选中: chs[0]=>", num)
+		case num, ok := <-chs[1]:
+			if !ok {
+				break
+			}
+			fmt.Println("第二个条件分支被选中: chs[1]=>", num)
+		case num, ok := <-chs[2]:
+			if !ok {
+				break
+			}
+			fmt.Println("第三个条件分支被选中: chs[2]=>", num)
+		default:
+			fmt.Println("没有分支被选中")
+		}
+	}
+}
