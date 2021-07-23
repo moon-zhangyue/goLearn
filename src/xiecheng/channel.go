@@ -30,17 +30,38 @@ import (
 //}
 
 //缓冲通道
-func test(ch chan int) {
+//func test(ch chan int) {
+//	for i := 0; i < 100; i++ {
+//		ch <- i
+//	}
+//	close(ch) //关闭通道
+//}
+//
+//func main() {
+//	start := time.Now()
+//	ch := make(chan int, 20) //缓冲通道
+//	//ch := make(chan int) //非缓冲通道
+//	go test(ch)
+//	for i := range ch {
+//		fmt.Println("接收到的数据:", i)
+//	}
+//	end := time.Now()
+//	consume := end.Sub(start).Seconds()
+//	fmt.Println("程序执行耗时(s)：", consume)
+//}
+
+//单向通道
+func test(ch chan<- int) {
+	//func test(ch <-chan int) {
 	for i := 0; i < 100; i++ {
 		ch <- i
 	}
-	close(ch) //关闭通道
+	close(ch)
 }
 
 func main() {
 	start := time.Now()
-	ch := make(chan int, 20) //缓冲通道
-	//ch := make(chan int) //非缓冲通道
+	ch := make(chan int, 20)
 	go test(ch)
 	for i := range ch {
 		fmt.Println("接收到的数据:", i)
