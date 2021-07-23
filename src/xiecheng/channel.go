@@ -204,17 +204,17 @@ func main() {
 		make(chan int, 3),
 	}
 
-	rand.Seed(time.Now().Unix())
+	rand.Seed(time.Now().UnixNano())
 	index1 := rand.Intn(3) // 随机生成0-2之间的数字
 	fmt.Printf("随机索引/数值: %d\n", index1)
 	chs[index1] <- rand.Int() // 向通道发送随机数字
 
-	rand.Seed(time.Now().Unix())
+	rand.Seed(time.Now().UnixNano())
 	index2 := rand.Intn(3)
 	fmt.Printf("随机索引/数值: %d\n", index2)
 	chs[index2] <- rand.Int()
 
-	rand.Seed(time.Now().Unix())
+	rand.Seed(time.Now().UnixNano())
 	index3 := rand.Intn(3)
 	fmt.Printf("随机索引/数值: %d\n", index3)
 	chs[index3] <- rand.Int()
