@@ -1,1 +1,3 @@
-module "chapter06"
+module chapter06
+
+go 1.13
