@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
 
 func main() {
 	ch := make(chan int, 2)
@@ -15,6 +18,7 @@ func main() {
 	}()
 	// 接收方
 	for {
+		time.Sleep(5 * time.Second) //加上超时 可以看出缓冲容量的作用
 		num, ok := <-ch
 		if !ok {
 			fmt.Println("接收方: 通道已关闭")
