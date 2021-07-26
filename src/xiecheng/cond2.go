@@ -54,16 +54,20 @@ func (db *DataBucket) Put(d []byte) (int, error) {
 	defer db.mutex.Unlock() // 结束后释放写锁
 	//写入一个数据块
 	n, err := db.buffer.Write(d)
-	db.cond.Signal() // 写入数据后通过 Signal 通知处于阻塞状态的读取器
+	db.cond.Broadcast() // 写入数据后通过 Broadcast 通知处于阻塞状态的读取器
 	return n, err
 }
 
 func main() {
 	db := NewDataBucket()
-	go db.Read(1) // 开启读取器协程
-	go func(i int) {
-		d := fmt.Sprintf("data-%d", i)
-		_, _ = db.Put([]byte(d)) // 写入数据到缓冲区
-	}(1) // 开启写入器协程
-	time.Sleep(100 * time.Millisecond)
+	for i := 1; i < 3; i++ { // 启动多个读取器
+		go db.Read(i)
+	}
+	for j := 0; j < 10; j++ { // 启动多个写入器
+		go func(i int) {
+			d := fmt.Sprintf("data-%d", i)
+			_, _ = db.Put([]byte(d)) // 写入数据到缓冲区
+		}(j)
+		time.Sleep(100 * time.Millisecond) // 每次启动一个写入器暂停100ms，让读取器阻塞
+	}
 }
