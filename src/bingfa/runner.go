@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-const timeout = 3 * time.Second
+const timeout = 3 * time.Second //改为5秒就正常退出
 
 func main() {
 	fmt.Println("开始运行...")

@@ -17,6 +17,8 @@ type JobRunner struct {
 var ErrTimeout = errors.New("received timeout")
 var ErrInterrupt = errors.New("received interrupt")
 
+//类的初始化函数 首字母大写
+//对 JobRunner 类进行初始化并返回一个指向该类的指针
 func New(d time.Duration) *JobRunner {
 	return &JobRunner{
 		interrupt: make(chan os.Signal, 1),
@@ -25,6 +27,7 @@ func New(d time.Duration) *JobRunner {
 	}
 }
 
+//成员方法
 func (r *JobRunner) Add(tasks ...func(int)) {
 	r.tasks = append(r.tasks, tasks...)
 }
