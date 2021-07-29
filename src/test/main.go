@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"strconv"
 )
 
 //func add(a, b int) int {
@@ -356,7 +355,7 @@ func itemsFilter(items []map[string]string, f func(map[string]string) bool) []ma
 	return newSlice
 }
 
-func main() {
+/*func main() {
 	var users = []map[string]string{
 		{
 			"name": "张三",
@@ -405,4 +404,4 @@ func main() {
 		return intAge
 	})
 	fmt.Printf("用户年龄累加结果: %d\n", sum)
-}
+}*/

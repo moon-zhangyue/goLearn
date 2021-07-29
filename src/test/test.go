@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 //type Integer int
 //
 ////比较
@@ -114,26 +112,26 @@ func (d Dog) Call() string {
 	return "汪汪汪"
 }
 
-func main() {
-	//animal := Animal{"中华田园犬"}
-	//dog := Dog{animal}
-	//fmt.Println(dog.GetName())
-	//fmt.Println(dog.Call())
-	//fmt.Println(dog.FavorFood())
-	//
-	////调用父类
-	//fmt.Print(dog.Animal.Call())
-	//fmt.Println(dog.Call())
-	//fmt.Print(dog.Animal.FavorFood())
-	//fmt.Println(dog.FavorFood())
-
-	animal := Animal{"中华田园犬"}
-	pet := Pet{"宠物狗"}
-	dog := Dog{&animal, pet}
-	// 通过 animal 引用 Animal 类型实例
-	fmt.Println(dog.animal.GetName())
-	fmt.Print(dog.animal.Call())
-	fmt.Println(dog.Call())
-	fmt.Print(dog.animal.FavorFood())
-	fmt.Println(dog.FavorFood())
-}
+//func main() {
+//	//animal := Animal{"中华田园犬"}
+//	//dog := Dog{animal}
+//	//fmt.Println(dog.GetName())
+//	//fmt.Println(dog.Call())
+//	//fmt.Println(dog.FavorFood())
+//	//
+//	////调用父类
+//	//fmt.Print(dog.Animal.Call())
+//	//fmt.Println(dog.Call())
+//	//fmt.Print(dog.Animal.FavorFood())
+//	//fmt.Println(dog.FavorFood())
+//
+//	animal := Animal{"中华田园犬"}
+//	pet := Pet{"宠物狗"}
+//	dog := Dog{&animal, pet}
+//	// 通过 animal 引用 Animal 类型实例
+//	fmt.Println(dog.animal.GetName())
+//	fmt.Print(dog.animal.Call())
+//	fmt.Println(dog.Call())
+//	fmt.Print(dog.animal.FavorFood())
+//	fmt.Println(dog.FavorFood())
+//}
