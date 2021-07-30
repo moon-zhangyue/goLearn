@@ -34,7 +34,8 @@ func main() {
 	//(*http.Client).Do
 
 	// 初始化客户端请求对象
-	req, err := http.NewRequest("GET", "https://xueyuanjun.com", nil)
+	//req, err := http.NewRequest("GET", "https://xueyuanjun.com", nil)
+	req, err := http.NewRequest("GET", "http://127.0.0.1:8080/hello?name=学院君", nil)
 	if err != nil {
 		fmt.Printf("请求初始化失败：%v", err)
 		return
