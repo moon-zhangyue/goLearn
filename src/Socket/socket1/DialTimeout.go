@@ -30,6 +30,10 @@ func main() {
 	result, err := readFully(conn)
 	checkError(err)
 
+	// 设置读写超时时间
+	err = conn.SetDeadline(time.Now().Add(5 * time.Second))
+	checkError(err)
+
 	// 打印响应数据
 	fmt.Println(string(result))
 
