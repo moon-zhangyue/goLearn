@@ -12,11 +12,13 @@ import (
 type MathService struct {
 }
 
+//定义乘法操作
 func (m *MathService) Multiply(args *utils.Args, reply *int) error {
 	*reply = args.A * args.B
 	return nil
 }
 
+//定义除法操作
 func (m *MathService) Divide(args *utils.Args, reply *int) error {
 	if args.B == 0 {
 		return errors.New("除数不能为0")
