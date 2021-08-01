@@ -30,9 +30,12 @@ func (m *MathService) Divide(args *utils.Args, reply *int) error {
 func main() {
 	// 启动 RPC 服务端
 	math := new(MathService)
-	rpc.Register(math)
+
+	_ = rpc.Register(math)
 	rpc.HandleHTTP()
+
 	listener, err := net.Listen("tcp", ":8080")
+
 	if err != nil {
 		log.Fatal("启动服务监听失败:", err)
 	}
