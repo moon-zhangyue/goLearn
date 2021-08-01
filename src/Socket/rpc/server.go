@@ -31,7 +31,7 @@ func main() {
 	// 启动 RPC 服务端
 	math := new(MathService)
 
-	rpc.Register(math)
+	_ = rpc.Register(math)
 	rpc.HandleHTTP()
 
 	listener, err := net.Listen("tcp", ":8080")
