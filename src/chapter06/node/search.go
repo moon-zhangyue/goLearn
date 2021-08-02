@@ -28,7 +28,7 @@ func (tree *BinarySearchTree) Insert(data interface{}) error {
 		tree.root = NewNode(value)
 		return nil
 	} else {
-		// 否则找到要插入的位置插入新的节点
+		// 否则循环找到要插入的位置插入新的节点
 		for node != nil {
 			if value < node.Data.(int) {
 				if node.Left == nil {
@@ -50,6 +50,26 @@ func (tree *BinarySearchTree) Insert(data interface{}) error {
 	}
 }
 
+// Find 查找值为data的节点
+func (tree *BinarySearchTree) Find(data int) *Node {
+	if node := tree.root; node == nil {
+		// 二叉排序树为空返回空
+		return nil
+	} else {
+		// 否则返回值等于data的节点指针
+		for node != nil {
+			if data < node.Data.(int) {
+				node = node.Left
+			} else if data > node.Data.(int) {
+				node = node.Right
+			} else {
+				return node
+			}
+		}
+		return nil
+	}
+}
+
 func main() {
 	tree := NewBinarySearchTree(nil)
 	_ = tree.Insert(3)
@@ -61,4 +81,11 @@ func main() {
 	fmt.Println("中序遍历二叉排序树：")
 	midOrderTraverse(tree.root)
 	fmt.Println()
+
+	fmt.Println("查找值为 3 的节点：")
+	node := tree.Find(3)
+	fmt.Printf("%v\n", node)
+	fmt.Println("查找值为 10 的节点：")
+	node = tree.Find(10)
+	fmt.Printf("%v\n", node)
 }
