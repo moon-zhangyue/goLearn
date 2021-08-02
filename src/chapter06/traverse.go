@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 // Node 通过链表存储二叉树节点信息
 type Node struct {
@@ -67,8 +69,10 @@ func main() {
 	node1 := NewNode(0) // 根节点
 	node2 := NewNode("1")
 	node3 := NewNode(2.0)
+
 	node1.Left = node2
 	node1.Right = node3
+
 	// 前序遍历这个二叉树
 	fmt.Print("前序遍历: ")
 	preOrderTraverse(node1)
