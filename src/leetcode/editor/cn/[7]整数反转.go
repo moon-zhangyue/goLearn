@@ -47,7 +47,15 @@ package main
 
 //leetcode submit region begin(Prohibit modification and deletion)
 func reverse(x int) int {
-	return x
+	var res int
+	for x != 0 {
+		if temp := int32(res); (temp*10)/10 != temp { //说明temp溢出了
+			return 0
+		}
+		res = res*10 + x%10
+		x = x / 10
+	}
+	return res
 }
 
 //leetcode submit region end(Prohibit modification and deletion)
