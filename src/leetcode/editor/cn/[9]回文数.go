@@ -55,17 +55,18 @@ func isPalindrome(x int) bool {
 	if x < 0 {
 		return false
 	}
-
-	var y int
+	var y = x
+	var temp int
 	for {
-		y = y*10 + x%10
+		temp = temp*10 + x%10
 		x = x / 10
+
 		if x == 0 {
 			break
 		}
 	}
 
-	if x != y {
+	if y != temp {
 		return false
 	}
 	return true
