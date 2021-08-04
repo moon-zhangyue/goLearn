@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"sort"
+	"math"
 )
 
 //给你一个整数数组 nums ，你需要找出一个 连续子数组 ，如果对这个子数组进行升序排序，那么整个数组都会变为升序排序。
@@ -54,24 +54,30 @@ import (
 
 //leetcode submit region begin(Prohibit modification and deletion)
 func findUnsortedSubarray(nums []int) int {
-	if sort.IntsAreSorted(nums) { //判断切片是否按照升序排序
+	n := len(nums)
+	minn, maxn := math.MaxInt64, math.MinInt64
+	fmt.Println(minn, maxn)
+	left, right := -1, -1
+	for i, num := range nums {
+		if maxn > num {
+			right = i
+		} else {
+			maxn = num
+		}
+		if minn < nums[n-i-1] {
+			left = n - i - 1
+		} else {
+			minn = nums[n-i-1]
+		}
+	}
+	if right == -1 {
 		return 0
-	}
-	numsSorted := append([]int(nil), nums...)
-	sort.Ints(numsSorted) //Ints 以升序排列 int 切片。
-	left, right := 0, len(nums)-1
-
-	for nums[left] == numsSorted[left] {
-		left++
-	}
-	for nums[right] == numsSorted[right] {
-		right--
 	}
 	return right - left + 1
 }
 
 func main() {
-	var nums = []int{2, 1, 3, 7, 5}
+	var nums = []int{2, 1, 3, 7, 5, 9}
 	res := findUnsortedSubarray(nums)
 	fmt.Println(res)
 }

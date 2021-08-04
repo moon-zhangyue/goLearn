@@ -52,6 +52,7 @@ import (
 // 👍 667 👎 0
 
 //leetcode submit region begin(Prohibit modification and deletion)
+//①排序
 func findUnsortedSubarray(nums []int) int {
 	if sort.IntsAreSorted(nums) { //判断切片是否按照升序排序
 		return 0
@@ -69,7 +70,4 @@ func findUnsortedSubarray(nums []int) int {
 	return right - left + 1
 }
 
-func main() {
-	
-}
 //leetcode submit region end(Prohibit modification and deletion)
