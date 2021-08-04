@@ -1,2 +1,2 @@
 # goLearn 
-先学着再说吧
+包括GO基本学习和leetcode刷题
