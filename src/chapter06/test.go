@@ -1,8 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"encoding/json"
+	"fmt"
+)
 
-func main() {
+/*func main() {
 	var varI interface{} = 1
 
 	v1 := varI.(int)
@@ -12,4 +15,14 @@ func main() {
 	if ok {
 		fmt.Printf("v2: %T: %d\n", v2, v2)
 	}
+}*/
+
+func main() {
+	var p *int
+	b, err := json.Marshal(p)
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+	fmt.Println(string(b))
 }
