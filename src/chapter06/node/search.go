@@ -80,7 +80,7 @@ func (tree *BinarySearchTree) Delete(data int) error {
 	var pp *Node = nil // p 的父节点
 
 	// 找到待删除节点
-	for p != nil && p.Data.(int) != data {
+	for p != nil && p.Data.(int) != data { //类型断言(type assertions)，用来转换接口类型
 		pp = p
 		if p.Data.(int) < data {
 			// 当前节点值小于待删除值，去右子树查找

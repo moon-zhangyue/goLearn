@@ -1,4 +1,10 @@
-//给你一个整数数组 nums ，你需要找出一个 连续子数组 ，如果对这个子数组进行升序排序，那么整个数组都会变为升序排序。 
+package main
+
+import (
+	"sort"
+)
+
+//给你一个整数数组 nums ，你需要找出一个 连续子数组 ，如果对这个子数组进行升序排序，那么整个数组都会变为升序排序。
 //
 // 请你找出符合题意的 最短 子数组，并输出它的长度。 
 //
@@ -43,11 +49,25 @@
 // 
 // 
 // Related Topics 栈 贪心 数组 双指针 排序 单调栈 
-// 👍 647 👎 0
-
+// 👍 667 👎 0
 
 //leetcode submit region begin(Prohibit modification and deletion)
+//①排序
 func findUnsortedSubarray(nums []int) int {
+	if sort.IntsAreSorted(nums) { //判断切片是否按照升序排序
+		return 0
+	}
+	numsSorted := append([]int(nil), nums...)
+	sort.Ints(numsSorted) //Ints 以升序排列 int 切片。
+	left, right := 0, len(nums)-1
 
+	for nums[left] == numsSorted[left] {
+		left++
+	}
+	for nums[right] == numsSorted[right] {
+		right--
+	}
+	return right - left + 1
 }
+
 //leetcode submit region end(Prohibit modification and deletion)
