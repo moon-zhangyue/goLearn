@@ -19,6 +19,7 @@ import (
 
 func main() {
 	var p *int
+
 	b, err := json.Marshal(p)
 	if err != nil {
 		fmt.Println(err)
