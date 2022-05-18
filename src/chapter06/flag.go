@@ -36,4 +36,5 @@ func main() {
 	}
 
 	log.Printf("name: %s", name)
+	log.Printf("name: %s", name)
 }
