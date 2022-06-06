@@ -42,7 +42,8 @@ func (head *Node1) traverse() {
 		node = node.next
 	}
 }
-func main() {
+
+/* func main() {
 	first := &Node1{data: 1}
 	second := &Node1{data: 2}
 	third := &Node1{data: 3}
@@ -61,4 +62,4 @@ func main() {
 	fmt.Print("反转后: ")
 	newHead.traverse()
 	fmt.Println()
-}
+} */

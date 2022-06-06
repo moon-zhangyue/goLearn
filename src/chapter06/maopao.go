@@ -1,6 +1,6 @@
 package main
 
-import "fmt"
+// import "fmt"
 
 //冒泡排序
 func bubbleSort(nums []int) []int {
@@ -25,8 +25,8 @@ func bubbleSort(nums []int) []int {
 	return nums
 }
 
-func main() {
+/* func main() {
 	nums := []int{4, 5, 6, 7, 2, 3, 1, 9}
 	nums = bubbleSort(nums)
 	fmt.Println(nums)
-}
+} */

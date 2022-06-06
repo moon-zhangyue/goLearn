@@ -64,7 +64,7 @@ func postOrderTraverse(treeNode *Node) {
 }
 
 // 测试代码
-func main() {
+/* func main() {
 	// 初始化一个简单的二叉树
 	node1 := NewNode(0) // 根节点
 	node2 := NewNode("1")
@@ -87,4 +87,4 @@ func main() {
 	fmt.Print("后序遍历: ")
 	postOrderTraverse(node1)
 	fmt.Println()
-}
+} */
