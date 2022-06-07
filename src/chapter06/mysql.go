@@ -36,7 +36,8 @@ func init() {
 }
 
 func main() {
-	r, err := Db.Exec("insert into person(username, sex, email)values(?, ?, ?)", "stu001", "man", "stu01@qq.com")
+	//Insert
+	/*r, err := Db.Exec("insert into person(username, sex, email)values(?, ?, ?)", "stu001", "man", "stu01@qq.com")
 	if err != nil {
 		fmt.Println("exec failed1, ", err)
 		return
@@ -47,5 +48,41 @@ func main() {
 		return
 	}
 
-	fmt.Println("insert succ:", id)
+	fmt.Println("insert succ:", id)*/
+
+	//Select
+	/*var person []Person
+	err := Db.Select(&person, "select user_id, username, sex, email from person where user_id=?", 1)
+	if err != nil {
+		fmt.Println("exec failed, ", err)
+		return
+	}
+
+	fmt.Println("select succ:", person)*/
+
+	//Update
+	/*res, err := Db.Exec("update person set username=? where user_id=?", "stu0003", 1)
+	if err != nil {
+		fmt.Println("exec failed, ", err)
+		return
+	}
+	row, err := res.RowsAffected()
+	if err != nil {
+		fmt.Println("rows failed, ", err)
+	}
+	fmt.Println("update succ:", row)*/
+
+	//Delete
+	res, err := Db.Exec("delete from person where user_id=?", 1)
+	if err != nil {
+		fmt.Println("exec failed, ", err)
+		return
+	}
+
+	row, err := res.RowsAffected()
+	if err != nil {
+		fmt.Println("rows failed, ", err)
+	}
+
+	fmt.Println("delete succ: ", row)
 }
