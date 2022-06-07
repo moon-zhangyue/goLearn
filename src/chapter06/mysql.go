@@ -73,7 +73,7 @@ func main() {
 	fmt.Println("update succ:", row)*/
 
 	//Delete
-	res, err := Db.Exec("delete from person where user_id=?", 1)
+	/*res, err := Db.Exec("delete from person where user_id=?", 1)
 	if err != nil {
 		fmt.Println("exec failed, ", err)
 		return
@@ -84,5 +84,8 @@ func main() {
 		fmt.Println("rows failed, ", err)
 	}
 
-	fmt.Println("delete succ: ", row)
+	fmt.Println("delete succ: ", row)*/
+
+	//事务
+
 }
