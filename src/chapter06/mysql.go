@@ -35,91 +35,91 @@ func init() {
 	//需要关掉 下面还没有使用 链接 就关闭了  如果需要关闭 需要在处理完sql后再关闭
 }
 
-func main() {
-	//Insert
-	/*r, err := Db.Exec("insert into person(username, sex, email)values(?, ?, ?)", "stu001", "man", "stu01@qq.com")
-	if err != nil {
-		fmt.Println("exec failed1, ", err)
-		return
-	}
-	id, err := r.LastInsertId()
-	if err != nil {
-		fmt.Println("exec failed2, ", err)
-		return
-	}
-
-	fmt.Println("insert succ:", id)*/
-
-	//Select
-	/*var person []Person
-	err := Db.Select(&person, "select user_id, username, sex, email from person where user_id=?", 1)
-	if err != nil {
-		fmt.Println("exec failed, ", err)
-		return
-	}
-
-	fmt.Println("select succ:", person)*/
-
-	//Update
-	/*res, err := Db.Exec("update person set username=? where user_id=?", "stu0003", 1)
-	if err != nil {
-		fmt.Println("exec failed, ", err)
-		return
-	}
-	row, err := res.RowsAffected()
-	if err != nil {
-		fmt.Println("rows failed, ", err)
-	}
-	fmt.Println("update succ:", row)*/
-
-	//Delete
-	/*res, err := Db.Exec("delete from person where user_id=?", 1)
-	if err != nil {
-		fmt.Println("exec failed, ", err)
-		return
-	}
-
-	row, err := res.RowsAffected()
-	if err != nil {
-		fmt.Println("rows failed, ", err)
-	}
-
-	fmt.Println("delete succ: ", row)*/
-
-	//事务
-	conn, err := Db.Begin() //开启事务
-	if err != nil {
-		fmt.Println("begin failed :", err)
-		return
-	}
-
-	r, err := conn.Exec("insert into person(username, sex, email)values(?, ?, ?)", "stu001", "man", "stu01@qq.com")
-	if err != nil {
-		fmt.Println("exec failed, ", err)
-		conn.Rollback() //回滚
-		return
-	}
-	id, err := r.LastInsertId()
-	if err != nil {
-		fmt.Println("exec failed, ", err)
-		conn.Rollback()
-		return
-	}
-	fmt.Println("insert succ:", id)
-
-	r, err = conn.Exec("insert into person(username, sex, email)values(?, ?, ?)", "stu001", "man", "stu01@qq.com")
-	if err != nil {
-		fmt.Println("exec failed, ", err)
-		conn.Rollback()
-		return
-	}
-	id, err = r.LastInsertId()
-	if err != nil {
-		fmt.Println("exec failed, ", err)
-		conn.Rollback()
-		return
-	}
-	fmt.Println("insert succ:", id)
-
-	conn.Commit() //提交
+//func main() {
+//Insert
+/*r, err := Db.Exec("insert into person(username, sex, email)values(?, ?, ?)", "stu001", "man", "stu01@qq.com")
+if err != nil {
+	fmt.Println("exec failed1, ", err)
+	return
 }
+id, err := r.LastInsertId()
+if err != nil {
+	fmt.Println("exec failed2, ", err)
+	return
+}
+
+fmt.Println("insert succ:", id)*/
+
+//Select
+/*var person []Person
+err := Db.Select(&person, "select user_id, username, sex, email from person where user_id=?", 1)
+if err != nil {
+	fmt.Println("exec failed, ", err)
+	return
+}
+
+fmt.Println("select succ:", person)*/
+
+//Update
+/*res, err := Db.Exec("update person set username=? where user_id=?", "stu0003", 1)
+if err != nil {
+	fmt.Println("exec failed, ", err)
+	return
+}
+row, err := res.RowsAffected()
+if err != nil {
+	fmt.Println("rows failed, ", err)
+}
+fmt.Println("update succ:", row)*/
+
+//Delete
+/*res, err := Db.Exec("delete from person where user_id=?", 1)
+if err != nil {
+	fmt.Println("exec failed, ", err)
+	return
+}
+
+row, err := res.RowsAffected()
+if err != nil {
+	fmt.Println("rows failed, ", err)
+}
+
+fmt.Println("delete succ: ", row)*/
+
+//事务
+//	conn, err := Db.Begin() //开启事务
+//	if err != nil {
+//		fmt.Println("begin failed :", err)
+//		return
+//	}
+//
+//	r, err := conn.Exec("insert into person(username, sex, email)values(?, ?, ?)", "stu001", "man", "stu01@qq.com")
+//	if err != nil {
+//		fmt.Println("exec failed, ", err)
+//		conn.Rollback() //回滚
+//		return
+//	}
+//	id, err := r.LastInsertId()
+//	if err != nil {
+//		fmt.Println("exec failed, ", err)
+//		conn.Rollback()
+//		return
+//	}
+//	fmt.Println("insert succ:", id)
+//
+//	r, err = conn.Exec("insert into person(username, sex, email)values(?, ?, ?)", "stu001", "man", "stu01@qq.com")
+//	if err != nil {
+//		fmt.Println("exec failed, ", err)
+//		conn.Rollback()
+//		return
+//	}
+//	id, err = r.LastInsertId()
+//	if err != nil {
+//		fmt.Println("exec failed, ", err)
+//		conn.Rollback()
+//		return
+//	}
+//	fmt.Println("insert succ:", id)
+//
+//	conn.Commit() //提交
+//}
