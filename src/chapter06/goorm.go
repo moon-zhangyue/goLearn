@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
 )
@@ -22,7 +21,7 @@ type UserInfo struct {
 //  parseTime是查询结果是否⾃动解析为时间
 //  loc是MySQL的时区设置
 //  charset是编码方式
-func main() {
+/*func main() {
 	fmt.Println("try open mysql connection....")
 	db, err := gorm.Open("mysql", "root:123456@(localhost:3306)/test?charset=utf8mb4&parseTime=True&loc=Local")
 	if err != nil {
@@ -50,4 +49,4 @@ func main() {
 	db.Model(&uu).Update("hobby", "sing")
 	// 删除 ， 此处删除记录，是不会将数据表中的数据删除掉，而是deleted_at 会更新删除时间
 	db.Delete(&uu)
-}
+}*/
